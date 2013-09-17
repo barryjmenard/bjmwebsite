@@ -1,0 +1,131 @@
+@import "base";
+@import "functions";
+@import "mixins";
+
+/* Styles intended for TinyMCE. Anything outside of the following selectors should appear in the 'style' srop down menu, if provided */
+
+.mceContentBody, .contentStyleInput input {
+    
+    /* default body styles */ 
+    color: $default-color;
+    font-weight: normal; 
+    font-size: 14px; /* TinyMCE does not support % or ems here... */ 
+    line-height: 1.75; 
+    font-family: $default-font;
+    
+    a, a:active, a:visited { 
+    	color: $link-color; 
+    	text-decoration: underline; 
+    }
+    
+    h1 {
+        @include headerone;
+    }
+    
+    h2 {
+        @include headertwo;
+    }
+    
+    h3 {
+        @include headerthree;
+    }
+    
+    h4 {
+        @include headerfour;
+    }
+    
+    h5 {
+        @include headerfive;
+    }
+    
+    h6 {
+        @include headersix;
+    }
+    
+    blockquote {
+        font-family: Georgia, serif; 
+        font-style: italic; 
+        padding: rhythm(.25) 1.5em rhythm(.25);
+        //background-color: $white; 
+        border-left: 3px solid $grey;
+        
+        > * {
+            margin-top: 0; 
+        }
+    }
+    
+    p, ul:not(.menu), ol:not(.menu), dl, blockquote, address, form, table {
+        margin-bottom: rhythm(0.75);
+    }
+    
+    ul, ol {
+        margin-left: 1.5em;
+    }
+    
+    dl {
+            
+        dt {
+            color: #807861; /* dark grey tan */ 
+            padding: .25em .5em .2em; 
+            font-weight: bold; 
+            background-color: #f5f0e1; /* super light tan */
+            border-top: 1px solid darken( #f5f0e1, 12% ); 
+        }
+        dd {
+            padding: .25em .5em .5em 2em; 
+            background-color: darken( #f5f0e1, 4% ); 
+        }
+    }
+    
+   
+    img[style='float: left;'] {
+        max-width: 33%; 
+        margin-right: 1em; 
+        margin-bottom: .5em; 
+    }
+    img[style='float: right;'] {
+        max-width: 33%; 
+        margin-left: 1em; 
+        margin-bottom: .5em; 
+    }
+}
+
+.giga { @include adjust-font-size( $giga ); }
+.mega { @include adjust-font-size( $mega ); }
+.kilo { @include adjust-font-size( $kilo ); }
+.micro { font-size: .875em; }
+
+.serif { 
+    font-family: Georgia, serif; 
+    font-size: 1.125em; 
+}
+.smallcaps { 
+    text-transform: lowercase; 
+    font-variant: small-caps; 
+    font-size: 1.25em; 
+    letter-spacing: 0.125em; 
+}
+.serif-smallcaps { 
+    @extend .serif; 
+    @extend .smallcaps; 
+}
+.allcaps { 
+    text-transform: uppercase; 
+    letter-spacing: 0.125em; 
+}
+.darktext { 
+    color: darken( $grey-dark, 6% ); 
+}
+.redtext { 
+    color: #c33; 
+}
+.yellow-highlight { 
+    background-color: #ff8; 
+    display: inline-block; 
+    padding: .125em .25em; 
+    margin: 0 -.125em; 
+}
+.abbreviation { 
+    @extend .smallcaps; 
+    border-bottom: 1px dotted $grey-light; 
+}

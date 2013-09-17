@@ -1,0 +1,24 @@
+@import "base";
+@import "functions";
+@import "mixins";
+
+/* Import Media Query mixins */
+@import "layout"; 
+
+
+/*
+ * Rules passed to browsers that DO NOT support media queries
+ * Include only the rulesets that we want to pass to older IE browsers. 
+ * Target the ~980/960px layout rulesets
+ */
+
+@include super-small-screen-cols; 
+@include super-small-screens; 
+
+@include small-screen-cols; 
+@include small-screens; 
+
+@include medium-screen-cols; 
+@include medium-screens; 
+
+@include large-screens; 

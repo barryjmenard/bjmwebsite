@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if lte IE 7]><html class="no-js oldie ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js oldie ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website# article: http://ogp.me/ns/article#">
+    
+    <!-- Prefetch some DNS lookups -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/css?family=Rokkitt:400,700|Sonsie+One|Francois+One">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="apple-mobile-web-app-title" content="BarryMenard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="format-detection" content="telephone=no">
+    
+    <script src="{{ STATIC_URL }}js/libs/modernizr.js"></script>
+    
+    <!--
+    <link rel="icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}img/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="{{ STATIC_URL }}img/apple-touch-icon-precomposed.png">
+    
+    <meta name="msapplication-TileColor" content="#e81487"/>
+    <meta name="msapplication-TileImage" content="{{ STATIC_URL }}img/metro-icon.png"/>
+    -->
+    
+    <!--meta name="google-site-verification" content="" /-->
+    
+    <!-- SEO and OpenGraph data - Needs to be fed dynamically according to the content of the page -->
+    <meta property="og:site_name" content="Barry Menard" />
+    <title>{% block page_title %}Barry Menard{% endblock %}</title>
+    <meta property="og:title" content="{% block og_title %}Barry Menard{% endblock %}" />
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/mq.css" media="screen and (min-width: 37.4375em)"><!-- 599px with a base of 16px -->
+    <!--[if (lt IE 9)&(!IEMobile)]>
+    <link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/mq.css" media="screen">
+    <![endif]-->
+    
+    <!-- Google fonts DO NOT work in IE8. Download the EOT files and serve them ourselves if you need to support them. -->
+    <!--[if !(lte IE 8)]><!-->
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Sonsie+One|Francois+One' >
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Patua+One' rel='stylesheet' type='text/css'>
+    <!--<![endif]-->
+    
+    <meta name="description" content="{% block page_description %}{% endblock %}">
+    <meta name="og:description" content="{% block og_description %}{% endblock %}">
+    
+    <!-- <meta property="og:url" content="http://www.projectevolution.com/" /> permalink to the curent page -->
+    <!-- <meta property="og:image" content="" /> If no specific image is part of the content, we should specify a default
+    <meta property="og:video" content="" /> -->
+</head>
+
+
+
+<body class="{% block page_class %}{% endblock %}">
+    
+    <!--div id="nojs">
+        <p>While Javascript is not essential for this website, your interaction with the content will be limited. Please turn Javascript on for the full experience. </p>
+    </div-->
+    
+    
+    <!-- <div id="test-window-size"></div> -->
+    
+    
+    <header id="site_header">
+        <div class="container">
+            <h1><strong>Barry Menard</strong>: Visual Designer, Front-End Web Developer</h1>
+        </div>
+    </header>
+    
+    
+    {% block status %}{% endblock %}
+    
+    
+    <nav id="nav1">
+        <div class="container">
+            <ul>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#strengths">Strengths</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#other">Other Interests</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <div id="site_content">
+        <div class="container text">
+            {% block page_content %}{% endblock %}
+        </div>
+    </div>
+    
+    
+    <footer id="site_footer">
+        <div class="container">
+            <p class="copyright">&copy; 2013 Barry Menard. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+    
+    <!--[if lte IE 8]>
+        <div class="ie-warning">
+            <p><em>Hey there&hellip;</em> Looks like you are using an old version of Internet Explorer. We&rsquo;re sorry to see that. You must see these warnings all the time. We thought you should know that this site will not look optimal, and we did the best we could to make it look pretty good. Ok, now that&rsquo;s off our chests, carry on... </p>
+        </div>
+    <![endif]-->
+    
+    
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7]>
+        <div class=chromeframe>
+            <p>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+        </div>
+    <![endif]-->
+    
+    {% block js %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+        {# compress js #}
+            <script src="{{ STATIC_URL }}js/plugins.js"></script>
+            <!--script src="{{ STATIC_URL }}js/libs/flexslider.js"></script> <!-- For responsive slideshows -->
+            <!--script src="{{ STATIC_URL }}js/libs/fresco.js"></script> <!-- For responsive lightboxes -->
+            <script src="{{ STATIC_URL }}js/script.js"></script> <!-- Project-specific variables and functions -->
+        {# endcompress #}
+    {% endblock %}
+</body>
+</html>

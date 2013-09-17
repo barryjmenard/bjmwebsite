@@ -1,0 +1,94 @@
+@import "base";
+@import "functions";
+@import "mixins";
+
+/* Import Media Query mixins */
+@import "layout"; 
+
+
+/*
+ * Rules passed to browsers that support media queries
+ * ALL rules must be passed through a MQ as this sheet loads without a query of its own.
+ * 
+ * We "label" the body with strings that correspond to js functions that we want to fire. 
+ * A window.resize() event checks this label and functions fire when conditions are met 
+ *
+ * The nice part is, these labels can be strings with more than one item in them. 
+ * As many JS functions that we want to fire at different widths can be controlled with tese labels.
+ *
+ *
+ * Important note: 
+ *
+ * When using px2em, the base EM will always be the default font size of the browser! 
+ * Even if we set the $base-font-size to be 14px, with relative font sizing in place, 16px is still really the base. 
+ * If your $base-font-size is anything but 16px, pass the 16px value to the function as a second parameter, 
+ * like so: px2em( 800px, 16px ) of your EM screen width calculations will NOT be correct.
+ */
+
+
+/* Sample of setting a descriptive hook onto the body
+@media (min-width: px2em( 480px )) {
+    
+    body:after {
+        content: 'actionhook';
+        display: none; 
+    }
+}
+*/
+
+
+@media (min-width: px2em( $breakpoint-super-small )) {
+    
+    @include super-small-screen-cols; 
+    @include super-small-screens; 
+}
+
+
+@media (min-width: px2em( $breakpoint-small )) {
+    
+    @include small-screen-cols; 
+    @include small-screens; 
+}
+
+
+@media (min-width: px2em( $breakpoint-small )) and (max-width: px2em( $max-breakpoint-only-small )) {
+    
+    @include only-small-screens; 
+}
+
+
+@media (min-width: px2em( $breakpoint-medium )) {
+    
+    @include medium-screen-cols; 
+    @include medium-screens; 
+}
+
+
+@media (min-width: px2em( $breakpoint-large )) {
+    
+    @include large-screens; 
+}
+
+
+@media (min-width: px2em( $breakpoint-larger )) {
+    
+    @include larger-screens; 
+}
+
+
+@media (min-height: px2em( $breakpoint-vertical )) {
+    
+    @include vertical-screens; 
+}
+
+
+/* http://dev.w3.org/csswg/css-device-adapt/
+ * http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+ * for IE10 Snap Mode on Metro
+ */
+@-ms-viewport {
+    width: device-width;
+}
+@viewport {
+    width: device-width;
+}

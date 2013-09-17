@@ -1,0 +1,417 @@
+@charset "UTF-8";
+/* Base Scss =========  This file defines application defaults and framework configuration. It should be the first scss file imported into the primary stylesheet. Do not make project specific changes here.
+
+*/
+/*  Compass Imports --------------- */
+/*  Grid System -----------  Susy: Un-obtrusive grids for designers By: Eric A. Meyer and OddBird URL: http://susy.oddbird.net
+*/
+/*  ### Settings  Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off.  Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+/* Default max width: Important, needed for calculations */
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+/*  ### Default Colors */
+/* Custom Project Colors */
+/*  ### Typography */
+/*  Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.  Note: The line height is relative to the constant $base-line-height.  The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems.  Don’t worry about nested elements, Compass will do the math.
+*/
+/* Positive is down */
+/* Base Scss =========  This file defines application defaults and framework configuration. It should be the first scss file imported into the primary stylesheet. Do not make project specific changes here.
+
+*/
+/*  Compass Imports --------------- */
+/*  Grid System -----------  Susy: Un-obtrusive grids for designers By: Eric A. Meyer and OddBird URL: http://susy.oddbird.net
+*/
+/*  ### Settings  Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off.  Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+/* Default max width: Important, needed for calculations */
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+/*  ### Default Colors */
+/* Custom Project Colors */
+/*  ### Typography */
+/*  Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.  Note: The line height is relative to the constant $base-line-height.  The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems.  Don’t worry about nested elements, Compass will do the math.
+*/
+/* Positive is down */
+/* Functional mixins – Items we would like to keep consistent from project to project */
+/* Turn numbers with units into unitless numbers: https://github.com/nex3/sass/issues/533 */
+/* Shorthand for a set of useful text/line-height resizing functions. easier to remember... */
+/* Easy little function to do the math of pixel to EM conversion for us. Needs a base-font-size set in _base.scss */
+/*  Font-size-adjust: the problem and a solution Not widely supported, can't use this yet */
+/* Since we can't use the above, let's create our own way to do it. */
+/* Quickly apply border styles to elements */
+/* Talk of depreciating the Compass mixin, so we pull it in here and make small adjustments */
+/* Namespace the box-sizing mixin so we can add support for IE6/7 */
+/* Vertical and Horizontal gradient mixins to make things easier. */
+/*  Set all the up-and-coming input text types here for easier reference  Does not include types that are not meant to be displayed full width, such as:  type=number, type=range, type=date, type=color */
+/*  Cross browser @keyframe definition set  Compass doesn't have one yet, so we namespace this so as not to conflict with a future release */
+/*  Cross browser animation definition set  Compass doesn't have one yet, so we namespace this so as not to conflict with a future release  $timing: linear | ease | ease-in | ease-out | ease-in-out $delay: seconds before animation starts $count: how many times the animation will loop $direction: normal | alternate (Play even-numbered iterations of the animation in the forward direction and odd-numbered iterations in the reverse direction.) $fill-mode: none | forwards | backwards | both forwards (The animation’s final keyframe continues to apply after the final iteration of the animation completes) backwards (The animation’s initial keyframe is applied as soon as the animation style is applied to an element.  This only affects animations that have a nonzero value for -webkit-animation-delay) both (The animation’s initial keyframe is applied as soon as the animation style is applied to an element,  and the animation’s final keyframe continues to apply after the final iteration of the animation completes.  The initial keyframe only affects animations that have a nonzero value for -webkit-animation-delay) */
+/*  Cross browser method to apply word-breaking and hyphenation (where supported)  Should be able to use the built-in Compass method, hyphenation(), but the library won't load right now */
+/* Keep this in all mix-in files if you can. Useful stuff */
+/* Manage our preferred reset as a Mix-in instead of replying on Compass or Blueprint */
+/* HTML5 Boilerplate Non-semantic helper classes */
+/* Add in the HTML5 Boilerplate rules for print (generic). Modify as needed. */
+/* Style Mixins ============ Styles that can be extended in other stylesheets, then modified as needed down the line.
+*/
+/*  General Mixins --------------     A library of mixins that can be used for any project, to be added to over time.
+*/
+/*  Default Header Mixins --------------------- Managed here to be used in multiple places.
+*/
+/* Drop Shadow effect – equal offset for right and bottom */
+/* Hide visually but leave available for screen readers */
+/* ! ===== Animation Effects ===== */
+/* translate3d(0,0,0) is a null transform hack that kicks hardware acceleration into effect. For desktop browsers, this means a smoother animation and text will not be re-rendered on animation end */
+/* Keyframes for pulse effects */
+@-webkit-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-moz-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-ms-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-o-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-webkit-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-moz-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-ms-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-o-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+/* ===== Local Mixins ===== */
+/* Styles that can be extended in multiple places using Compass, like so: .new-style { @extend %mixin; // pulls in style attributes from the mixin color: #333; // adds more style }
+*/
+/* ----- End Local Mixins ----- */
+/* Import Media Query mixins */
+/* Base Scss =========  This file defines application defaults and framework configuration. It should be the first scss file imported into the primary stylesheet. Do not make project specific changes here.
+
+*/
+/*  Compass Imports --------------- */
+/*  Grid System -----------  Susy: Un-obtrusive grids for designers By: Eric A. Meyer and OddBird URL: http://susy.oddbird.net
+*/
+/*  ### Settings  Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off.  Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+/* Default max width: Important, needed for calculations */
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+/*  ### Default Colors */
+/* Custom Project Colors */
+/*  ### Typography */
+/*  Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.  Note: The line height is relative to the constant $base-line-height.  The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems.  Don’t worry about nested elements, Compass will do the math.
+*/
+/* Positive is down */
+/* Base Scss =========  This file defines application defaults and framework configuration. It should be the first scss file imported into the primary stylesheet. Do not make project specific changes here.
+
+*/
+/*  Compass Imports --------------- */
+/*  Grid System -----------  Susy: Un-obtrusive grids for designers By: Eric A. Meyer and OddBird URL: http://susy.oddbird.net
+*/
+/*  ### Settings  Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off.  Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+/* Default max width: Important, needed for calculations */
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+/*  ### Default Colors */
+/* Custom Project Colors */
+/*  ### Typography */
+/*  Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.  Note: The line height is relative to the constant $base-line-height.  The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems.  Don’t worry about nested elements, Compass will do the math.
+*/
+/* Positive is down */
+/* Functional mixins – Items we would like to keep consistent from project to project */
+/* Turn numbers with units into unitless numbers: https://github.com/nex3/sass/issues/533 */
+/* Shorthand for a set of useful text/line-height resizing functions. easier to remember... */
+/* Easy little function to do the math of pixel to EM conversion for us. Needs a base-font-size set in _base.scss */
+/*  Font-size-adjust: the problem and a solution Not widely supported, can't use this yet */
+/* Since we can't use the above, let's create our own way to do it. */
+/* Quickly apply border styles to elements */
+/* Talk of depreciating the Compass mixin, so we pull it in here and make small adjustments */
+/* Namespace the box-sizing mixin so we can add support for IE6/7 */
+/* Vertical and Horizontal gradient mixins to make things easier. */
+/*  Set all the up-and-coming input text types here for easier reference  Does not include types that are not meant to be displayed full width, such as:  type=number, type=range, type=date, type=color */
+/*  Cross browser @keyframe definition set  Compass doesn't have one yet, so we namespace this so as not to conflict with a future release */
+/*  Cross browser animation definition set  Compass doesn't have one yet, so we namespace this so as not to conflict with a future release  $timing: linear | ease | ease-in | ease-out | ease-in-out $delay: seconds before animation starts $count: how many times the animation will loop $direction: normal | alternate (Play even-numbered iterations of the animation in the forward direction and odd-numbered iterations in the reverse direction.) $fill-mode: none | forwards | backwards | both forwards (The animation’s final keyframe continues to apply after the final iteration of the animation completes) backwards (The animation’s initial keyframe is applied as soon as the animation style is applied to an element.  This only affects animations that have a nonzero value for -webkit-animation-delay) both (The animation’s initial keyframe is applied as soon as the animation style is applied to an element,  and the animation’s final keyframe continues to apply after the final iteration of the animation completes.  The initial keyframe only affects animations that have a nonzero value for -webkit-animation-delay) */
+/*  Cross browser method to apply word-breaking and hyphenation (where supported)  Should be able to use the built-in Compass method, hyphenation(), but the library won't load right now */
+/* Keep this in all mix-in files if you can. Useful stuff */
+/* Manage our preferred reset as a Mix-in instead of replying on Compass or Blueprint */
+/* HTML5 Boilerplate Non-semantic helper classes */
+/* Add in the HTML5 Boilerplate rules for print (generic). Modify as needed. */
+/* Style Mixins ============ Styles that can be extended in other stylesheets, then modified as needed down the line.
+*/
+/*  General Mixins --------------     A library of mixins that can be used for any project, to be added to over time.
+*/
+/*  Default Header Mixins --------------------- Managed here to be used in multiple places.
+*/
+/* Drop Shadow effect – equal offset for right and bottom */
+/* Hide visually but leave available for screen readers */
+/* ! ===== Animation Effects ===== */
+/* translate3d(0,0,0) is a null transform hack that kicks hardware acceleration into effect. For desktop browsers, this means a smoother animation and text will not be re-rendered on animation end */
+/* Keyframes for pulse effects */
+@-webkit-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-moz-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-ms-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-o-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-webkit-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-moz-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-ms-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-o-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+/* ===== Local Mixins ===== */
+/* Styles that can be extended in multiple places using Compass, like so: .new-style { @extend %mixin; // pulls in style attributes from the mixin color: #333; // adds more style }
+*/
+/* ----- End Local Mixins ----- */
+/* ! ===== START Media Queries ===== 
+ Important note:   When using px2em, the base EM will always be the default font size of the browser!  Even if we set the $base-font-size to be 14px, with relative font sizing in place, 16px is still really the base.  If your $base-font-size is anything but 16px, pass the 16px value to the function as a second parameter,  like so: px2em( 800px, 16px ) of your EM screen width calculations will NOT be correct.
+*/
+/* Breakpoints */
+/*740px*/
+/* ! ==== Columns at a glance ==== */
+/* ! ==== Super Small Screens ==== */
+/* ! ==== Small Screens ==== */
+/* ! ==== Only Small Screens ==== */
+/* ! ==== Medium Screens ==== */
+/* ! ==== Large Screens ==== */
+/* ! ==== Larger Screens ==== */
+/* ! ==== Tall Screens that are not touch enabled ==== */
+/* Rules passed to browsers that DO NOT support media queries Include only the rulesets that we want to pass to older IE browsers.  Target the ~980/960px layout rulesets */
+/* default 2 column asymmetric structure */
+/* line 37, ../sass/_layout.scss */
+.default-columns .column { float: left; }
+/* line 39, ../sass/_layout.scss */
+.default-columns > *[role="main"] { width: 65%; }
+/* line 41, ../sass/_layout.scss */
+.default-columns > *[role="complementary"], .default-columns > *[role="secondary"] { width: 35%; }
+
+/* line 44, ../sass/_layout.scss */
+.two-col, .four-col { /* every other, starting at the third element */ }
+/* line 45, ../sass/_layout.scss */
+.two-col .column, .four-col .column { float: left; width: 50%; }
+/* line 47, ../sass/_layout.scss */
+.two-col .column:nth-of-type(2n+3), .four-col .column:nth-of-type(2n+3) { clear: left; }
+
+/* line 52, ../sass/_layout.scss */
+#nav1 li { display: inline-block; margin-right: .75em; }
+/* line 56, ../sass/_layout.scss */
+#nav1 li.jump { display: none; }
+
+/* footer nav into 2 columns */
+/* line 63, ../sass/_layout.scss */
+.secondary-navigation .navigation { margin: 0 -1em; }
+/* line 66, ../sass/_layout.scss */
+.secondary-navigation .navigation .home-link { display: none; }
+/* line 68, ../sass/_layout.scss */
+.secondary-navigation .navigation a { text-align: left; }
+/* line 72, ../sass/_layout.scss */
+.secondary-navigation .navigation .tier-1 { padding: 0 1em; float: left; width: 50%; /* every other, starting at the fourth element b/c we hide the first one */ }
+/* line 76, ../sass/_layout.scss */
+.secondary-navigation .navigation .tier-1:nth-of-type(2n+4) { clear: left; }
+
+/* line 81, ../sass/_layout.scss */
+.copyright p { margin-bottom: 0; }
+
+/* Animate some elements when media queries force changes */
+/* line 131, ../sass/_layout.scss */
+.column, .site-title img, .pagination, .secondary-navigation { -webkit-transition: 0.3s all ease-in-out; -moz-transition: 0.3s all ease-in-out; -o-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+
+/* end animation */
+/* line 136, ../sass/_layout.scss */
+.main-navigation { text-align: center; }
+
+/* line 140, ../sass/_layout.scss */
+figure figcaption { text-align: left; }
+
+/* line 146, ../sass/_layout.scss */
+.copyright .softbreak { display: none; }
+
+/* default 2 column asymmetric structure */
+/* line 91, ../sass/_layout.scss */
+.default-columns > *[role="main"] { width: 70%; }
+/* line 93, ../sass/_layout.scss */
+.default-columns > *[role="complementary"], .default-columns > *[role="secondary"] { width: 30%; }
+
+/* line 96, ../sass/_layout.scss */
+.three-col { /* Every third, starting with the fourth element */ }
+/* line 97, ../sass/_layout.scss */
+.three-col .column { float: left; width: 33.3%; }
+/* line 99, ../sass/_layout.scss */
+.three-col .column:nth-of-type(3n+4) { clear: left; }
+
+/* line 102, ../sass/_layout.scss */
+.four-col { /* reset the clear pattern from the two col structure */ }
+/* line 103, ../sass/_layout.scss */
+.four-col .column { width: 25%; }
+/* line 104, ../sass/_layout.scss */
+.four-col .column:nth-of-type(2n+3) { clear: none; }
+/* line 105, ../sass/_layout.scss */
+.four-col .column:nth-of-type(4n+5) { clear: left; }
+
+/* More space around writing */
+/* line 165, ../sass/_layout.scss */
+.default-columns > *[role="main"] { padding-left: 2em; padding-right: 2em; }
+/* line 171, ../sass/_layout.scss */
+.default-columns > *[role="complementary"], .default-columns > *[role="secondary"] { padding-left: 1.5em; padding-right: 1.5em; }
+
+/* line 177, ../sass/_layout.scss */
+.column-hero { margin-left: -2em; margin-right: -2em; }
+
+/* line 184, ../sass/_layout.scss */
+.site-title img { margin: 0; }
+
+/*ul*/
+/* line 189, ../sass/_layout.scss */
+.client-list { margin: 0 -0.5em; overflow: hidden; *zoom: 1; }
+/* line 193, ../sass/_layout.scss */
+.client-list li { float: left; width: 50%; padding: 0 0.5em; }
+/* line 198, ../sass/_layout.scss */
+.client-list li:nth-of-type(2n+3) { clear: left; }
+
+/* line 202, ../sass/_layout.scss */
+.breadcrumbs, .pagination, .previous-next { margin-left: -1.5em; margin-right: -1.5em; padding: 0.25em 1.25em; }
+
+/* line 212, ../sass/_layout.scss */
+.pagination a.prev-link:after { content: " Prev"; }
+/* line 219, ../sass/_layout.scss */
+.pagination a.next-link:before { content: "Next "; }
+
+/* footer nav into 4 columns */
+/* line 230, ../sass/_layout.scss */
+.secondary-navigation .navigation .tier-1 { width: 25%; }
+/* line 232, ../sass/_layout.scss */
+.secondary-navigation .navigation .tier-1:nth-of-type(2n+4) { clear: none; }
+
+/* line 244, ../sass/_layout.scss */
+.main-navigation .navigation { padding: 0; }

@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/* Base Scss =========  This file defines application defaults and framework configuration. It should be the first scss file imported into the primary stylesheet. Do not make project specific changes here.
+
+*/
+/*  Compass Imports --------------- */
+/*  Grid System -----------  Susy: Un-obtrusive grids for designers By: Eric A. Meyer and OddBird URL: http://susy.oddbird.net
+*/
+/*  ### Settings  Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off.  Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+/* Default max width: Important, needed for calculations */
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+/*  ### Default Colors */
+/* Custom Project Colors */
+/*  ### Typography */
+/*  Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.  Note: The line height is relative to the constant $base-line-height.  The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems.  Don’t worry about nested elements, Compass will do the math.
+*/
+/* Positive is down */
+/* Base Scss =========  This file defines application defaults and framework configuration. It should be the first scss file imported into the primary stylesheet. Do not make project specific changes here.
+
+*/
+/*  Compass Imports --------------- */
+/*  Grid System -----------  Susy: Un-obtrusive grids for designers By: Eric A. Meyer and OddBird URL: http://susy.oddbird.net
+*/
+/*  ### Settings  Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off.  Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+/* Default max width: Important, needed for calculations */
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+/*  ### Default Colors */
+/* Custom Project Colors */
+/*  ### Typography */
+/*  Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.  Note: The line height is relative to the constant $base-line-height.  The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems.  Don’t worry about nested elements, Compass will do the math.
+*/
+/* Positive is down */
+/* Functional mixins – Items we would like to keep consistent from project to project */
+/* Turn numbers with units into unitless numbers: https://github.com/nex3/sass/issues/533 */
+/* Shorthand for a set of useful text/line-height resizing functions. easier to remember... */
+/* Easy little function to do the math of pixel to EM conversion for us. Needs a base-font-size set in _base.scss */
+/*  Font-size-adjust: the problem and a solution Not widely supported, can't use this yet */
+/* Since we can't use the above, let's create our own way to do it. */
+/* Quickly apply border styles to elements */
+/* Talk of depreciating the Compass mixin, so we pull it in here and make small adjustments */
+/* Namespace the box-sizing mixin so we can add support for IE6/7 */
+/* Vertical and Horizontal gradient mixins to make things easier. */
+/*  Set all the up-and-coming input text types here for easier reference  Does not include types that are not meant to be displayed full width, such as:  type=number, type=range, type=date, type=color */
+/*  Cross browser @keyframe definition set  Compass doesn't have one yet, so we namespace this so as not to conflict with a future release */
+/*  Cross browser animation definition set  Compass doesn't have one yet, so we namespace this so as not to conflict with a future release  $timing: linear | ease | ease-in | ease-out | ease-in-out $delay: seconds before animation starts $count: how many times the animation will loop $direction: normal | alternate (Play even-numbered iterations of the animation in the forward direction and odd-numbered iterations in the reverse direction.) $fill-mode: none | forwards | backwards | both forwards (The animation’s final keyframe continues to apply after the final iteration of the animation completes) backwards (The animation’s initial keyframe is applied as soon as the animation style is applied to an element.  This only affects animations that have a nonzero value for -webkit-animation-delay) both (The animation’s initial keyframe is applied as soon as the animation style is applied to an element,  and the animation’s final keyframe continues to apply after the final iteration of the animation completes.  The initial keyframe only affects animations that have a nonzero value for -webkit-animation-delay) */
+/*  Cross browser method to apply word-breaking and hyphenation (where supported)  Should be able to use the built-in Compass method, hyphenation(), but the library won't load right now */
+/* Keep this in all mix-in files if you can. Useful stuff */
+/* Manage our preferred reset as a Mix-in instead of replying on Compass or Blueprint */
+/* HTML5 Boilerplate Non-semantic helper classes */
+/* Add in the HTML5 Boilerplate rules for print (generic). Modify as needed. */
+/* Style Mixins ============ Styles that can be extended in other stylesheets, then modified as needed down the line.
+*/
+/*  General Mixins --------------     A library of mixins that can be used for any project, to be added to over time.
+*/
+/*  Default Header Mixins --------------------- Managed here to be used in multiple places.
+*/
+/* Drop Shadow effect – equal offset for right and bottom */
+/* Hide visually but leave available for screen readers */
+/* ! ===== Animation Effects ===== */
+/* translate3d(0,0,0) is a null transform hack that kicks hardware acceleration into effect. For desktop browsers, this means a smoother animation and text will not be re-rendered on animation end */
+/* Keyframes for pulse effects */
+@-webkit-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-moz-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-ms-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-o-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-webkit-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-moz-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-ms-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-o-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+/* ===== Local Mixins ===== */
+/* Styles that can be extended in multiple places using Compass, like so: .new-style { @extend %mixin; // pulls in style attributes from the mixin color: #333; // adds more style }
+*/
+/* ----- End Local Mixins ----- */
+/* Styles intended for TinyMCE. Anything outside of the following selectors should appear in the 'style' srop down menu, if provided */
+/* line 7, ../sass/mce.scss */
+.mceContentBody, .contentStyleInput input { /* default body styles */ color: #444444; font-weight: normal; font-size: 14px; /* TinyMCE does not support % or ems here... */ line-height: 1.75; font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; }
+/* line 16, ../sass/mce.scss */
+.mceContentBody a, .mceContentBody a:active, .mceContentBody a:visited, .contentStyleInput input a, .contentStyleInput input a:active, .contentStyleInput input a:visited { color: #7d3e1d; text-decoration: underline; }
+/* line 21, ../sass/mce.scss */
+.mceContentBody h1, .contentStyleInput input h1 { color: #7d3e1d; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.75em; line-height: 1.5em; font-weight: 400; line-height: 1.3em; margin-top: 0.4375em; margin-bottom: 0.4375em; }
+/* line 25, ../sass/mce.scss */
+.mceContentBody h2, .contentStyleInput input h2 { color: #333333; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.5em; line-height: 1.16667em; font-weight: 400; margin-top: 0.875em; margin-bottom: 0.175em; text-transform: uppercase; }
+/* line 95, ../sass/_mixins.scss */
+.text .mceContentBody h2, .entry .mceContentBody h2, .text .contentStyleInput input h2, .entry .contentStyleInput input h2 { color: #595959; }
+/* line 29, ../sass/mce.scss */
+.mceContentBody h3, .contentStyleInput input h3 { color: #595959; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.125em; line-height: 1.55556em; font-weight: 400; margin-top: 1.75em; margin-bottom: 0.4375em; }
+/* line 33, ../sass/mce.scss */
+.mceContentBody h4, .contentStyleInput input h4 { color: #666666; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.0625em; line-height: 1.64706em; font-weight: 400; margin-top: 0.875em; margin-bottom: 0.4375em; }
+/* line 37, ../sass/mce.scss */
+.mceContentBody h5, .contentStyleInput input h5 { color: #444444; font-weight: bold; text-transform: uppercase; margin-top: 0.875em; margin-bottom: 0.4375em; }
+/* line 41, ../sass/mce.scss */
+.mceContentBody h6, .contentStyleInput input h6 { color: #444444; font-weight: bold; margin-top: 0.875em; margin-bottom: 0.4375em; }
+/* line 45, ../sass/mce.scss */
+.mceContentBody blockquote, .contentStyleInput input blockquote { font-family: Georgia, serif; font-style: italic; padding: 0.4375em 1.5em 0.4375em; border-left: 3px solid #666666; }
+/* line 52, ../sass/mce.scss */
+.mceContentBody blockquote > *, .contentStyleInput input blockquote > * { margin-top: 0; }
+/* line 57, ../sass/mce.scss */
+.mceContentBody p, .mceContentBody ul:not(.menu), .mceContentBody ol:not(.menu), .mceContentBody dl, .mceContentBody blockquote, .mceContentBody address, .mceContentBody form, .mceContentBody table, .contentStyleInput input p, .contentStyleInput input ul:not(.menu), .contentStyleInput input ol:not(.menu), .contentStyleInput input dl, .contentStyleInput input blockquote, .contentStyleInput input address, .contentStyleInput input form, .contentStyleInput input table { margin-bottom: 1.3125em; }
+/* line 61, ../sass/mce.scss */
+.mceContentBody ul, .mceContentBody ol, .contentStyleInput input ul, .contentStyleInput input ol { margin-left: 1.5em; }
+/* line 67, ../sass/mce.scss */
+.mceContentBody dl dt, .contentStyleInput input dl dt { color: #807861; /* dark grey tan */ padding: 0.25em 0.5em 0.2em; font-weight: bold; background-color: #f5f0e1; /* super light tan */ border-top: 1px solid #e6d9b3; }
+/* line 74, ../sass/mce.scss */
+.mceContentBody dl dd, .contentStyleInput input dl dd { padding: 0.25em 0.5em 0.5em 2em; background-color: #f0e8d2; }
+/* line 81, ../sass/mce.scss */
+.mceContentBody img[style='float: left;'], .contentStyleInput input img[style='float: left;'] { max-width: 33%; margin-right: 1em; margin-bottom: .5em; }
+/* line 86, ../sass/mce.scss */
+.mceContentBody img[style='float: right;'], .contentStyleInput input img[style='float: right;'] { max-width: 33%; margin-left: 1em; margin-bottom: .5em; }
+
+/* line 93, ../sass/mce.scss */
+.giga { font-size: 3em; line-height: 1.16667em; }
+
+/* line 94, ../sass/mce.scss */
+.mega { font-size: 2.625em; line-height: 1.33333em; }
+
+/* line 95, ../sass/mce.scss */
+.kilo { font-size: 2.25em; line-height: 1.16667em; }
+
+/* line 96, ../sass/mce.scss */
+.micro { font-size: .875em; }
+
+/* line 98, ../sass/mce.scss */
+.serif, .serif-smallcaps { font-family: Georgia, serif; font-size: 1.125em; }
+
+/* line 102, ../sass/mce.scss */
+.smallcaps, .serif-smallcaps, .abbreviation { text-transform: lowercase; font-variant: small-caps; font-size: 1.25em; letter-spacing: 0.125em; }
+
+/* line 112, ../sass/mce.scss */
+.allcaps { text-transform: uppercase; letter-spacing: 0.125em; }
+
+/* line 116, ../sass/mce.scss */
+.darktext { color: #242424; }
+
+/* line 119, ../sass/mce.scss */
+.redtext { color: #c33; }
+
+/* line 122, ../sass/mce.scss */
+.yellow-highlight { background-color: #ff8; display: inline-block; padding: 0.125em 0.25em; margin: 0 -0.125em; }
+
+/* line 128, ../sass/mce.scss */
+.abbreviation { border-bottom: 1px dotted #939393; }

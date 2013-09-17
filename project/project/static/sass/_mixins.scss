@@ -1,0 +1,288 @@
+/*
+    Style Mixins
+    ============
+    Styles that can be extended in other stylesheets, then modified as needed down the line.
+*/
+
+
+
+
+/*  General Mixins
+    --------------    
+    A library of mixins that can be used for any project, to be added to over time.
+*/
+
+%horizontal-list {
+    
+    li {
+        display: inline-block; 
+    }
+    .lt-ie8 & {
+        display: inline; 
+    }
+}
+
+%primary-box {
+    color: $grey-dark; 
+    border: 2px solid $primary; 
+    @include vertical-gradient( $primary, darken( $primary, 8% ) );
+    @include box-shadow( 0 0 .5em rgba( $black, .5 ) ); 
+    @include border-radius(); 
+}
+
+%primary-box-hover {
+    color: $white; 
+    border-color: darken( $primary, 6% ); 
+    @include vertical-gradient( darken( $primary, 15% ), darken( $primary, 10% ) );
+}
+
+%light-box {
+    color: $grey; 
+    border: 2px solid $grey-lightest; 
+    @include vertical-gradient( $grey-lightest, $grey-lighter );
+    @include box-shadow( 0 0 .5em rgba( $black, .2 ) ); 
+    @include border-radius(); 
+}
+
+%light-box-hover {
+    color: $grey-dark; 
+    @include vertical-gradient( $grey-lighter, $grey-lightest );
+}
+
+%dark-box {
+    color: $white; 
+    border: 2px solid darken( $grey, 8% ); 
+    @include vertical-gradient( $grey, $grey-dark );
+    @include box-shadow( 0 0 .5em rgba( $black, .9 ) ); 
+    @include border-radius(); 
+}
+
+%dark-box-hover {
+    color: $grey-dark; 
+    @include vertical-gradient( $grey-light, $grey-lighter );
+}
+
+@mixin common-transition {
+    @include transition( .3s all ease-in-out ); 
+}
+
+
+
+/*  Default Header Mixins
+    ---------------------
+    Managed here to be used in multiple places.
+*/
+
+@mixin headerone {
+    color: $brick;
+    font-family: $alt-font;
+    @include adjust-font-size( $headerone );
+    font-weight: 400;
+    line-height: 1.3em;
+    @include leader(.25);
+    @include trailer(.25);
+}
+
+@mixin headertwo {
+    color: $grey-dark;
+    font-family: $alt-font;
+    @include adjust-font-size( $headertwo );
+    font-weight: 400;
+    @include leader(.5);
+    @include trailer(.1);
+    text-transform: uppercase; 
+    
+    .text &, .entry & {
+        color: lighten($grey-dark, 15%);
+    }
+}
+
+@mixin headerthree {
+    color: lighten( $grey-dark, 15% );
+    font-family: $alt-font;
+    @include adjust-font-size( $headerthree );
+    font-weight: 400;
+    @include leader(1); 
+    @include trailer(.25);
+}
+
+@mixin headerfour {
+    color: lighten( $grey-dark, 20% );
+    font-family: $alt-font;
+    @include adjust-font-size( $headerfour );
+    font-weight: 400;
+    @include leader(.5); 
+    @include trailer(.25);
+}
+
+@mixin headerfive {
+    color: $default-color;
+    font-weight: bold; 
+    text-transform: uppercase; 
+    @include leader(.5); 
+    @include trailer(.25);
+}
+
+@mixin headersix {
+    color: $default-color;
+    font-weight: bold; 
+    @include leader(.5); 
+    @include trailer(.25);
+}
+
+
+
+/* Drop Shadow effect – equal offset for right and bottom */
+
+@mixin dropshadow( $opacity: .4, $ie-color:#999999 ) {
+    @include box-shadow( .125em .125em .25em rgba( $black, $opacity ) ); 
+    
+    .lt-ie9 & {
+        filter: progid:DXImageTransform.Microsoft.Shadow(color='$ie-color', Direction=225, Strength=3); 
+    }
+} 
+
+/* Hide visually but leave available for screen readers */
+@mixin screen-reader-text() { 
+    max-width: 0; 
+    max-height: 0; 
+    overflow: hidden; 
+    @include opacity( 0 ); 
+    /*position: absolute;
+    clip: rect(0 0 0 0); 
+    border: 0; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; */
+}
+@mixin screen-reader-text-reset() { 
+    max-width: 100%; 
+    max-height: 100%; 
+    overflow: visible; 
+    @include opacity( 1 ); 
+}
+
+
+/* ! ===== Animation Effects ===== */
+/* translate3d(0,0,0) is a null transform hack that kicks hardware acceleration into effect. For desktop browsers, this means a smoother animation and text will not be re-rendered on animation end */
+
+@mixin grow-effect-onhover( $duration: $default-transition-duration, $properties: all, $scale: 1.1 ) {
+    
+    .no-touch & {
+        @include single-transition( $duration $properties ease-in-out ); 
+        @include transform-origin( 50%, 50%, 50% ); 
+        @include backface-visibility( hidden ); 
+        
+        &:hover, &:focus {
+            @include transform( scale( $scale ) translate3d(0,0,0), true );
+        }
+    }
+}
+
+/* Keyframes for pulse effects */
+@include pe-keyframes( white-pulse ) {
+    from { @include box-shadow( 0 0 2em rgba( #fff, 0 ) ); }
+    to   { @include box-shadow( 0 0 2em rgba( #fff, 1 ) ); }
+}
+
+@include pe-keyframes( dark-pulse ) {
+    from { @include box-shadow( 0 0 2em rgba( #000, 0 ) ); }
+    to   { @include box-shadow( 0 0 2em rgba( #000, .6 ) ); }
+}
+
+@mixin pulse-effect( $animation:white-pulse, $this-duration: 1s, $this-count:infinite ) {
+    
+    .no-touch & {
+        @include pe-animation( $animation, $duration: $this-duration, $timing:ease, $delay:0, $count: $this-count, $direction:alternate, $fill-mode:none ); 
+    }
+}
+
+
+
+/* ===== Local Mixins ===== */
+/* Styles that can be extended in multiple places using Compass, like so:
+        .new-style {
+            @extend %mixin; // pulls in style attributes from the mixin
+            color: #333; // adds more style
+        }
+*/
+
+%subtle-box {
+    background: lighten($gold, 45%);
+    font-family: $default-font;
+    padding: rhythm(.5) 1.5em rhythm(.5);
+    
+    > * {
+        margin-top: 0;
+    }
+    
+    p, ul, ol {
+    
+        &:last-child {
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+%button-container {
+    @include border-radius(3px);
+    @include box-shadow( inset 0 0 .5em rgba(0, 0, 0, .35) , inset 0 1em 1px rgba(255, 255, 255, .1) , inset 0 1px 0 rgba(255, 255, 255, .5) );
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .35);
+    width: auto;
+}
+
+%button {
+    @extend %button-container;
+    
+    border: 1px solid darken( $primary, 15% );
+    color: lighten($primary, 15%);
+    font-family: $alt-font;
+    @include vertical-gradient( $primary, darken($primary, 10%) );
+    
+    &:hover, &:focus, &:active, &.active {
+        color: $white; 
+        @include vertical-gradient( darken($primary, 5%), darken( $primary, 15%) );
+    }
+}
+
+%black-button {
+    @extend %button;
+    border: 1px solid #222;
+    color: #ccc;
+    @include vertical-gradient( #444, #222 );
+    
+    &:hover, &:focus, &:active, &.active {
+        @include vertical-gradient( #333, #000 ); 
+    }
+}
+
+%newsheader-type {
+    color: $grey-light;
+    font-family: $alt-font;
+    @include adjust-font-size( 13px );
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    
+    a:link, a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    a:hover, a:active {
+        color: $primary;
+        text-decoration: underline;
+    }
+}
+
+%newsheader-block {
+    @extend %newsheader-type;
+    border-top: 1px solid $grey-lighter;
+    border-bottom: 1px solid $grey-lighter;
+    margin: 1.5em 0;
+    padding: .5em .2em;
+}
+/* ----- End Local Mixins ----- */

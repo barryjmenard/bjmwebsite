@@ -1,0 +1,37 @@
+/* 
+ * Would have liked to use Compass' built-in font-face mixin with the inline-font-files() helper, but it seems to be BROKEN in older versions!
+ * Be sure to upgrade to at least 0.12.1 to have this work properly. 
+ * in Terminal, gem install compass --version '= 0.12.1'
+
+It goes like this: 
+
+Paths for the CSS need to be relative ot the stylesheet. Path to the inline file uses config.rb, so, it might be different. 
+
+@font-face {
+  font-family: "SommetSlabBold";                                                // Normal declaration
+  src: url('/fonts/SommetSlabBold-webfont.eot');                                // Older versions of IE need the EOT
+  src: src: local('☺'),                                                        // Stop old IE from reaqding further
+       url('/fonts/SommetSlabBold-webfont.eot?#iefix') format('eot'),           // IE9 needs an EOT fix
+       url('/fonts/SommetSlabBold-webfont.svg?#SommetSlabBold') format('svg'),  // SVG needs to be separate for iOS. Better rendering for browsers that suport it, too. 
+       inline-font-files( "SommetSlabBold-webfont.ttf", truetype );             // Other browsers get a Base64 encoded font inline, no HTTP request
+  font-weight: normal;  // helpful to declare these values so the fallback fonts still retain some style
+  font-style: normal;  // helpful to declare these values so the fallback fonts still retain some style
+}
+
+Since we are importing the data of the entire font, try to make sure only the neccesary fonts are listed here!
+
+ */
+
+/*
+@font-face {
+    font-family: "SommetSlabLight";
+    src: url("../fonts/SommetSlabLight-webfont.eot");
+    src: local('☺'),
+       url("../fonts/SommetSlabLight-webfont.eot?#iefix") format('embedded-opentype'), 
+       url('../fonts/SommetSlabLight-webfont.ttf') format('truetype'),
+       url('../fonts/SommetSlabLight-webfont.svg?#SommetSlabLight') format('svg'); 
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+

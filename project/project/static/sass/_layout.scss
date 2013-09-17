@@ -1,0 +1,290 @@
+@import "base";
+@import "functions";
+@import "mixins";
+
+/* ! ===== START Media Queries ===== 
+
+    Important note: 
+    
+    When using px2em, the base EM will always be the default font size of the browser! 
+    Even if we set the $base-font-size to be 14px, with relative font sizing in place, 16px is still really the base. 
+    If your $base-font-size is anything but 16px, pass the 16px value to the function as a second parameter, 
+    like so: px2em( 800px, 16px ) of your EM screen width calculations will NOT be correct.
+*/
+
+
+/* Breakpoints */
+$breakpoint-super-small:    480px; 
+$breakpoint-small:          600px; 
+$max-breakpoint-only-small: 739px; 
+$breakpoint-medium:         880px; /*740px*/ 
+$breakpoint-large:          980px; 
+$breakpoint-larger:         1100px; 
+
+
+
+/* ! ==== Columns at a glance ==== */ 
+
+@mixin super-small-screen-cols {
+
+}
+
+@mixin small-screen-cols {
+    
+    /* default 2 column asymmetric structure */
+    .default-columns {
+        
+        .column { float: left; }
+        
+        & > *[role="main"] { width: 65%; }
+        & > *[role="complementary"],
+        & > *[role="secondary"] { width: 35%; }
+    }
+    
+    .two-col, .four-col {
+        .column { float: left; width: 50%; }
+        /* every other, starting at the third element */
+        .column:nth-of-type(2n+3) { clear: left; }
+    }
+    
+    #nav1 {
+        
+        li {
+            display: inline-block;
+            margin-right: .75em;
+            
+            &.jump { display: none; }
+        }
+    }
+    
+    /* footer nav into 2 columns */
+    .secondary-navigation { 
+
+        .navigation {
+            margin: 0 -1em; 
+            
+            .home-link { display: none; }
+            
+            a {
+                text-align: left;
+            }
+                
+            .tier-1 {
+                padding: 0 1em; 
+                float: left; width: 50%;
+                /* every other, starting at the fourth element b/c we hide the first one */
+                &:nth-of-type(2n+4) { clear: left; }
+            }
+        }
+    }
+    
+    .copyright p {
+        margin-bottom: 0; 
+    }
+}
+
+@mixin medium-screen-cols {
+    
+    /* default 2 column asymmetric structure */
+    .default-columns {
+        
+        & > *[role="main"] { width: 70%; }
+        & > *[role="complementary"],
+        & > *[role="secondary"] { width: 30%; }
+    }
+    
+    .three-col {
+        .column { float: left; width: 33.3%; }
+        /* Every third, starting with the fourth element */
+        .column:nth-of-type(3n+4) { clear: left; }
+    }
+    
+    .four-col {
+        .column { width: 25%; }
+        .column:nth-of-type(2n+3) { clear: none; } /* reset the clear pattern from the two col structure */
+        .column:nth-of-type(4n+5) { clear: left; }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ! ==== Super Small Screens ==== */ 
+@mixin super-small-screens {}
+
+
+
+/* ! ==== Small Screens ==== */
+@mixin small-screens {
+    
+    /* Animate some elements when media queries force changes */
+    .column, 
+    .site-title img, 
+    .pagination, 
+    .secondary-navigation {
+        @include common-transition;  
+    }
+    /* end animation */
+    
+    .main-navigation {
+        text-align: center;
+    }
+    
+    figure figcaption {
+        text-align: left;
+    }
+    
+    .copyright {
+        
+        .softbreak {
+            display: none; 
+        }
+    }
+}
+
+
+
+/* ! ==== Only Small Screens ==== */
+@mixin only-small-screens {}
+
+
+
+/* ! ==== Medium Screens ==== */
+@mixin medium-screens {
+    
+    /* More space around writing */
+    .default-columns {
+        
+        & > *[role="main"] {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+        
+        & > *[role="complementary"],
+        & > *[role="secondary"] {
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+    }
+    
+    .column-hero {
+        margin-left: -2em; 
+        margin-right: -2em; 
+    }
+    
+    .site-title {
+        
+        img {
+            margin: 0;
+        }
+    }
+    
+    /*ul*/ .client-list {
+        margin: 0 -.5em; 
+        @include clearfix; 
+        
+        li {
+            float: left; 
+            width: 50%; 
+            padding: 0 .5em; 
+            
+            &:nth-of-type(2n+3) { clear: left; }
+        }
+    }
+    
+    .breadcrumbs, .pagination, .previous-next {
+        margin-left: -1.5em;
+        margin-right: -1.5em;
+        padding: 0.25em 1.25em;
+    }
+    
+    .pagination {
+        
+        a.prev-link {
+    
+            &:after {
+                content: " Prev";
+            }
+        }
+        
+        a.next-link {
+            
+            &:before {
+                content: "Next ";
+            }
+        }
+    }
+    
+    /* footer nav into 4 columns */
+    .secondary-navigation { 
+
+        .navigation {
+            
+            .tier-1 {
+                width: 25%;
+                &:nth-of-type(2n+4) { clear: none; }
+            }
+        }
+    }
+}
+
+
+/* ! ==== Large Screens ==== */
+@mixin large-screens {
+    
+    .main-navigation {
+        
+        .navigation {
+            padding: 0;
+        }
+    }
+}
+
+
+/* ! ==== Larger Screens ==== */
+@mixin larger-screens {
+    
+    /* More space around writing */
+    .default-columns {
+        
+        & > *[role="main"] { 
+            padding-left: 2em; 
+            padding-right: 2em; 
+        }
+        & > *[role="complementary"],
+        & > *[role="secondary"] { 
+            padding-left: 1.5em; 
+            padding-right: 1.5em; 
+        }
+    }
+    
+    .column-hero {
+        margin-left: -2.5em; 
+        margin-right: -2.5em; 
+    }
+}
+
+
+/* ! ==== Tall Screens that are not touch enabled ==== */
+$breakpoint-vertical: 640px; 
+
+@mixin vertical-screens {
+    
+     .no-touch {
+         
+         .main-header {
+            // position: fixed; 
+            // top: 0; left: 0; right: 0; 
+            // background: rgba( $white, .9 ); 
+            // border-bottom: 0; 
+            // @include box-shadow( 0 .125em .25em rgba( $black, 0.4 ) ); 
+        }
+    }
+}

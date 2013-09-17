@@ -1,0 +1,156 @@
+/*
+    Base Scss
+    =========
+    
+    This file defines application defaults and framework configuration.
+    It should be the first scss file imported into the primary stylesheet.
+    Do not make project specific changes here.
+
+*/
+
+
+
+/*  Compass Imports
+    --------------- */
+
+@import "compass";
+// @import "compass/css3/columns"
+@import "compass/css3/font-face";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/box-sizing";
+// @import "compass/css3/hyphenation";
+@import "compass/css3/inline-block";
+// @import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/typography"; 
+@import "compass/typography/links/link-colors"; // needed for the link-colors() function
+@import "compass/typography/lists/horizontal-list"; // needed for the horizontal-list() function
+@import "compass/typography/text/nowrap"; // finds whether or not there's a hyphen in white-space
+@import "compass/support";
+@import "compass/utilities/general/clearfix"; // use pie-clearfix when there is no width set on an element to avoid edge cases
+@import "compass/utilities/color/contrast"; // calculates color legibility
+
+
+
+/*  Grid System
+    -----------
+    
+    Susy: Un-obtrusive grids for designers
+    By: Eric A. Meyer and OddBird
+    URL: http://susy.oddbird.net
+*/
+
+@import "susy";
+
+/*  ### Settings
+    
+    Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off. 
+    Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+ 
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: true;
+
+$total-max-width: 980px; /* Default max width: Important, needed for calculations */
+$grid-padding: 1em; // default
+
+
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+
+
+
+/*  ### Default Colors */
+
+$default-color: #444;
+
+$white: #fff;
+$grey-lightest: #e9e9e9;
+$grey-lighter: #d6d6d6;
+$grey-light: #939393;
+$grey: #666;
+$grey-dark: #333;
+$black: #161616;
+
+// Custom Variables for this Project
+
+/* Custom Project Colors */
+$gold: #ca992c;
+$brick: #7d3e1d;
+$burg: #630d0d;
+
+$primary: $burg; 
+$secondary: $brick;
+$terciary: $gold;
+
+$primary-text: $default-color;
+$link-color: $brick;
+$link-hover: darken( $brick, 15% );
+
+
+
+/*  ### Typography */
+
+// all computed values to be in EMs?
+$relative-font-sizing: true;
+
+// Allow adjust-font-size-to and lines-for-font-size mixins to round to the nearest half line height?
+$round-to-nearest-half-line: true;
+
+// Useful to set these here, but don't echo anywhere else. Used in calculations.
+$base-font-size: 16px;
+$base-line-height: 28px;
+
+$default-font: "Source Sans Pro", Arial, Helvetica, sans-serif;
+$alt-font: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif;
+$cursive: cursive;
+
+// Default Font Sizes
+$giga: 48px;
+$mega: 42px;
+$kilo: 36px;
+$headerone: 28px;
+$headertwo: 24px;
+$headerthree: 18px;
+$headerfour: 17px;
+
+
+/* 
+    Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.
+    
+    Note: The line height is relative to the constant $base-line-height. 
+    The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems. 
+    Don’t worry about nested elements, Compass will do the math.
+*/
+
+
+
+// Other Defaults
+$default-border-radius: 4px;
+$default-box-shadow-color: rgba( #000, .3 );
+$default-box-shadow-h-offset: 2px;
+$default-box-shadow-v-offset: 2px; /* Positive is down */
+$default-box-shadow-blur: 4px;
+$default-box-shadow-spread: false;
+$default-box-shadow-inset: false;
+
+$default-transition-property: all;
+$default-transition-duration: .3s;
+$default-transition-function: false;
+$default-transition-delay: false;

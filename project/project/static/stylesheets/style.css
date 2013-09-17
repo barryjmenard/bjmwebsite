@@ -1,0 +1,1028 @@
+@charset "UTF-8";
+/* Base Scss =========  This file defines application defaults and framework configuration. It should be the first scss file imported into the primary stylesheet. Do not make project specific changes here.
+
+*/
+/*  Compass Imports --------------- */
+/*  Grid System -----------  Susy: Un-obtrusive grids for designers By: Eric A. Meyer and OddBird URL: http://susy.oddbird.net
+*/
+/*  ### Settings  Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off.  Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+/* Default max width: Important, needed for calculations */
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+/*  ### Default Colors */
+/* Custom Project Colors */
+/*  ### Typography */
+/*  Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.  Note: The line height is relative to the constant $base-line-height.  The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems.  Don’t worry about nested elements, Compass will do the math.
+*/
+/* Positive is down */
+/* Base Scss =========  This file defines application defaults and framework configuration. It should be the first scss file imported into the primary stylesheet. Do not make project specific changes here.
+
+*/
+/*  Compass Imports --------------- */
+/*  Grid System -----------  Susy: Un-obtrusive grids for designers By: Eric A. Meyer and OddBird URL: http://susy.oddbird.net
+*/
+/*  ### Settings  Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that on or off.  Susy 1.0. Update your GEM file by deleting the old an downloading the new. 
+*/
+/* Default max width: Important, needed for calculations */
+/*  ### Alternate Grids
+
+$total-max-width: 980px;
+$total-columns: 18;
+$column-width: 28px;
+$gutter-width: 24px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+$total-max-width: 980px;
+$total-columns: 16;
+$column-width: 40px;
+$gutter-width: 20px;
+$grid-padding: $gutter-width;
+$container-style: fluid;
+
+*/
+/*  ### Default Colors */
+/* Custom Project Colors */
+/*  ### Typography */
+/*  Compass will convert font sizes from px to em and fit it into the vertical rhythm automatically with the necessary margin.  Note: The line height is relative to the constant $base-line-height.  The number you specify for the leader, trailer and leading will be multiplied by the constant, then converted to its relative value in ems.  Don’t worry about nested elements, Compass will do the math.
+*/
+/* Positive is down */
+/* Functional mixins – Items we would like to keep consistent from project to project */
+/* Turn numbers with units into unitless numbers: https://github.com/nex3/sass/issues/533 */
+/* Shorthand for a set of useful text/line-height resizing functions. easier to remember... */
+/* Easy little function to do the math of pixel to EM conversion for us. Needs a base-font-size set in _base.scss */
+/*  Font-size-adjust: the problem and a solution Not widely supported, can't use this yet */
+/* Since we can't use the above, let's create our own way to do it. */
+/* Quickly apply border styles to elements */
+/* Talk of depreciating the Compass mixin, so we pull it in here and make small adjustments */
+/* Namespace the box-sizing mixin so we can add support for IE6/7 */
+/* Vertical and Horizontal gradient mixins to make things easier. */
+/*  Set all the up-and-coming input text types here for easier reference  Does not include types that are not meant to be displayed full width, such as:  type=number, type=range, type=date, type=color */
+/*  Cross browser @keyframe definition set  Compass doesn't have one yet, so we namespace this so as not to conflict with a future release */
+/*  Cross browser animation definition set  Compass doesn't have one yet, so we namespace this so as not to conflict with a future release  $timing: linear | ease | ease-in | ease-out | ease-in-out $delay: seconds before animation starts $count: how many times the animation will loop $direction: normal | alternate (Play even-numbered iterations of the animation in the forward direction and odd-numbered iterations in the reverse direction.) $fill-mode: none | forwards | backwards | both forwards (The animation’s final keyframe continues to apply after the final iteration of the animation completes) backwards (The animation’s initial keyframe is applied as soon as the animation style is applied to an element.  This only affects animations that have a nonzero value for -webkit-animation-delay) both (The animation’s initial keyframe is applied as soon as the animation style is applied to an element,  and the animation’s final keyframe continues to apply after the final iteration of the animation completes.  The initial keyframe only affects animations that have a nonzero value for -webkit-animation-delay) */
+/*  Cross browser method to apply word-breaking and hyphenation (where supported)  Should be able to use the built-in Compass method, hyphenation(), but the library won't load right now */
+/* Keep this in all mix-in files if you can. Useful stuff */
+/* Manage our preferred reset as a Mix-in instead of replying on Compass or Blueprint */
+/* HTML5 Boilerplate Non-semantic helper classes */
+/* Add in the HTML5 Boilerplate rules for print (generic). Modify as needed. */
+/* line 295, ../sass/_functions.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* line 303, ../sass/_functions.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, form { display: block; }
+
+/* line 304, ../sass/_functions.scss */
+blockquote { quotes: none; }
+
+/* line 305, ../sass/_functions.scss */
+blockquote:before, blockquote:after { content: ""; content: none; }
+
+/* line 306, ../sass/_functions.scss */
+q { display: inline; }
+
+/* line 307, ../sass/_functions.scss */
+q:before { content: "“"; }
+
+/* line 308, ../sass/_functions.scss */
+q:after { content: "”"; }
+
+/* line 309, ../sass/_functions.scss */
+q q:before { content: "‘"; }
+
+/* line 310, ../sass/_functions.scss */
+q q:after { content: "’"; }
+
+/* line 311, ../sass/_functions.scss */
+ins { background-color: #ddd; text-decoration: none; }
+
+/* line 312, ../sass/_functions.scss */
+mark { display: inline-block; padding: 0 0.25em; margin: 0 -0.125em; background-color: #ffb; }
+
+/* line 313, ../sass/_functions.scss */
+s, strike, del { text-decoration: line-through; }
+
+/* line 314, ../sass/_functions.scss */
+abbr[title], dfn[title] { /* border-bottom: 1px dotted; */ cursor: help; }
+
+/* line 315, ../sass/_functions.scss */
+table { /* width: 100%; */ border-collapse: collapse; border-spacing: 0; }
+
+/* line 316, ../sass/_functions.scss */
+th, td { text-align: left; vertical-align: top; }
+
+/* line 317, ../sass/_functions.scss */
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 2.1875em 0; padding: 0; }
+
+/* line 318, ../sass/_functions.scss */
+input, button, select { display: inline-block; vertical-align: middle; cursor: pointer; }
+
+/* line 320, ../sass/_functions.scss */
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; overflow-y: scroll; -webkit-font-smoothing: antialiased; margin: 0; }
+
+/* line 328, ../sass/_functions.scss */
+body { *font-size: small; text-rendering: optimizeSpeed; }
+
+/* line 329, ../sass/_functions.scss */
+input, textarea, button, select { font-size: 99%; -webkit-font-smoothing: antialiased; margin: 0; }
+
+/* line 330, ../sass/_functions.scss */
+svg:not(:root) { overflow: hidden; }
+
+/* fixes an issue in IE9 */
+/* line 331, ../sass/_functions.scss */
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+/* Minimal base styles */
+/* line 334, ../sass/_functions.scss */
+a:hover, a:active { outline: none; }
+
+/* line 335, ../sass/_functions.scss */
+ul, ol { margin-left: 1.5em; }
+
+/* line 336, ../sass/_functions.scss */
+ul { list-style: square; }
+
+/* line 337, ../sass/_functions.scss */
+ol { list-style: decimal; }
+
+/* line 338, ../sass/_functions.scss */
+ol ol { list-style: upper-alpha; }
+
+/* line 339, ../sass/_functions.scss */
+ol ol ol { list-style: lower-roman; }
+
+/* line 340, ../sass/_functions.scss */
+ol ol ol ol { list-style: lower-alpha; }
+
+/* line 341, ../sass/_functions.scss */
+nav ul, menu ul, .menu, .tabs { margin-left: 0; list-style: none; list-style-image: none; }
+
+/* line 342, ../sass/_functions.scss */
+small { font-size: 85%; }
+
+/* line 343, ../sass/_functions.scss */
+b, strong, th { font-weight: 700; }
+
+/* line 344, ../sass/_functions.scss */
+i, em, cite { font-style: italic; }
+
+/* line 346, ../sass/_functions.scss */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+
+/* line 347, ../sass/_functions.scss */
+sup { top: -0.5em; }
+
+/* line 348, ../sass/_functions.scss */
+sub { bottom: -0.25em; }
+
+/* line 350, ../sass/_functions.scss */
+pre, code, kbd, samp, var { font-family: Courier, monospace, sans-serif; }
+
+/* line 351, ../sass/_functions.scss */
+pre { /* PE's codey-looking pre style, just for kicks */ white-space: pre-wrap; white-space: -moz-pre-wrap !important; /* 1999+ Mozilla */ white-space: -pre-wrap; /* Opera 4 thru 6 */ white-space: -o-pre-wrap; /* Opera 7 and up */ word-wrap: break-word; /* IE 5.5+ and up */ padding: 1em; margin-bottom: 1em; background: #e9e9e9; background: rgba(214, 214, 214, 0.5); border-left: 5px solid #630d0d; }
+
+/* line 363, ../sass/_functions.scss */
+code { color: #630d0d; font-size: 108%; }
+
+/* line 364, ../sass/_functions.scss */
+var { font-size: 112%; font-style: italic; }
+
+/* line 366, ../sass/_functions.scss */
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* line 367, ../sass/_functions.scss */
+.ie7 legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px; }
+
+/* line 368, ../sass/_functions.scss */
+input[type="radio"] { vertical-align: text-bottom; }
+
+/* line 369, ../sass/_functions.scss */
+input[type="checkbox"] { vertical-align: baseline; }
+
+/* line 370, ../sass/_functions.scss */
+.ie7 input[type="checkbox"] { vertical-align: bottom; }
+
+/* line 372, ../sass/_functions.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+/* line 374, ../sass/_functions.scss */
+button[disabled], input[disabled] { cursor: default; }
+
+/*input:invalid, textarea:invalid, input.error, textarea.error {
+	border-radius: 1px; 
+	-webkit-box-shadow: 0px 0px 5px red; 
+	-moz-box-shadow: 0px 0px 5px red; 
+	-ms-box-shadow: 0px 0px 5px red; 
+	-o-box-shadow: 0px 0px 5px red; 
+	box-shadow: 0px 0px 5px red;
+}*/
+/* line 383, ../sass/_functions.scss */
+input[type="checkbox"], input[type="radio"] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* path needs to be root relative we can't always serve this file the way it needs to be served (gondor.io), unfortunately
+behavior: stylesheet-url("boxsizing.htc"); */ padding: 0; *width: 13px; *height: 13px; }
+
+/* line 384, ../sass/_functions.scss */
+input[type="search"] { -webkit-appearance: textfield; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* path needs to be root relative we can't always serve this file the way it needs to be served (gondor.io), unfortunately
+behavior: stylesheet-url("boxsizing.htc"); */ }
+
+/* line 385, ../sass/_functions.scss */
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/* line 387, ../sass/_functions.scss */
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+/* line 388, ../sass/_functions.scss */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/* Aural rulesets */
+/* line 391, ../sass/_functions.scss */
+abbr.initialism { speak: spell-out; }
+
+/* line 392, ../sass/_functions.scss */
+abbr.truncation { speak: normal; }
+
+/* Stupid IE: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/ */
+@-ms-viewport { width: device-width; }
+
+/* line 396, ../sass/_functions.scss */
+canvas { -ms-touch-action: double-tap-zoom; }
+
+/* line 397, ../sass/_functions.scss */
+svg:not(:root) { overflow: hidden; }
+
+/* fixes an issue in IE9 */
+/* Style Mixins ============ Styles that can be extended in other stylesheets, then modified as needed down the line.
+*/
+/*  General Mixins --------------     A library of mixins that can be used for any project, to be added to over time.
+*/
+/* line 17, ../sass/_mixins.scss */
+.text .horizontal-list li, .entry .horizontal-list li { display: inline-block; }
+/* line 20, ../sass/_mixins.scss */
+.lt-ie8 .text .horizontal-list, .text .lt-ie8 .horizontal-list, .lt-ie8 .entry .horizontal-list, .entry .lt-ie8 .horizontal-list { display: inline; }
+
+/* line 39, ../sass/_mixins.scss */
+.text p code, .text samp, .text kbd, .entry p code, .entry samp, .entry kbd { color: #666666; border: 2px solid #e9e9e9; background-color: #d6d6d6; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#FFD6D6D6'); background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(10%, #e9e9e9), color-stop(90%, #d6d6d6)); background-image: -webkit-linear-gradient(#e9e9e9 10%, #d6d6d6 90%); background-image: -moz-linear-gradient(#e9e9e9 10%, #d6d6d6 90%); background-image: -o-linear-gradient(#e9e9e9 10%, #d6d6d6 90%); background-image: linear-gradient(#e9e9e9 10%, #d6d6d6 90%); -webkit-box-shadow: 0 0 0.5em rgba(22, 22, 22, 0.2); -moz-box-shadow: 0 0 0.5em rgba(22, 22, 22, 0.2); box-shadow: 0 0 0.5em rgba(22, 22, 22, 0.2); -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+
+/*  Default Header Mixins --------------------- Managed here to be used in multiple places.
+*/
+/* Drop Shadow effect – equal offset for right and bottom */
+/* Hide visually but leave available for screen readers */
+/* ! ===== Animation Effects ===== */
+/* translate3d(0,0,0) is a null transform hack that kicks hardware acceleration into effect. For desktop browsers, this means a smoother animation and text will not be re-rendered on animation end */
+/* Keyframes for pulse effects */
+@-webkit-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-moz-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-ms-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-o-keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@keyframes white-pulse { /* line 186, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 0); -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 0); box-shadow: 0 0 2em rgba(255, 255, 255, 0); }
+  /* line 187, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em white; -moz-box-shadow: 0 0 2em white; box-shadow: 0 0 2em white; } }
+
+@-webkit-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-moz-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-ms-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@-o-keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+@keyframes dark-pulse { /* line 191, ../sass/_mixins.scss */
+  from { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0); box-shadow: 0 0 2em rgba(0, 0, 0, 0); }
+  /* line 192, ../sass/_mixins.scss */
+  to { -webkit-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); box-shadow: 0 0 2em rgba(0, 0, 0, 0.6); } }
+
+/* ===== Local Mixins ===== */
+/* Styles that can be extended in multiple places using Compass, like so: .new-style { @extend %mixin; // pulls in style attributes from the mixin color: #333; // adds more style }
+*/
+/* line 212, ../sass/_mixins.scss */
+blockquote, .call-to-action { background: #f9f2e3; font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; padding: 0.875em 1.5em 0.875em; }
+/* line 217, ../sass/_mixins.scss */
+blockquote > *, .call-to-action > * { margin-top: 0; }
+/* line 223, ../sass/_mixins.scss */
+blockquote p:last-child, .call-to-action p:last-child, blockquote ul:last-child, .call-to-action ul:last-child, blockquote ol:last-child, .call-to-action ol:last-child { margin-bottom: 0.5em; }
+
+/* line 229, ../sass/_mixins.scss */
+input[type=submit], input[type=reset], button, .button, a.button, .label { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: inset 0 0 0.5em rgba(0, 0, 0, 0.35), inset 0 1em 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5); -moz-box-shadow: inset 0 0 0.5em rgba(0, 0, 0, 0.35), inset 0 1em 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5); box-shadow: inset 0 0 0.5em rgba(0, 0, 0, 0.35), inset 0 1em 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5); text-decoration: none; text-shadow: 0 0 3px rgba(0, 0, 0, 0.35); width: auto; }
+
+/* line 237, ../sass/_mixins.scss */
+input[type=submit], input[type=reset], button, .button, a.button { border: 1px solid #1f0404; color: #a71616; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; background-color: #360707; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF630D0D', endColorstr='#FF360707'); background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(10%, #630d0d), color-stop(90%, #360707)); background-image: -webkit-linear-gradient(#630d0d 10%, #360707 90%); background-image: -moz-linear-gradient(#630d0d 10%, #360707 90%); background-image: -o-linear-gradient(#630d0d 10%, #360707 90%); background-image: linear-gradient(#630d0d 10%, #360707 90%); }
+/* line 245, ../sass/_mixins.scss */
+input[type=submit]:hover, input[type=reset]:hover, button:hover, .button:hover, input[type=submit]:focus, input[type=reset]:focus, button:focus, .button:focus, input[type=submit]:active, input[type=reset]:active, button:active, .button:active, input.active[type=submit], input.active[type=reset], button.active, .active.button { color: white; background-color: #1f0404; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4C0A0A', endColorstr='#FF1F0404'); background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(10%, #4c0a0a), color-stop(90%, #1f0404)); background-image: -webkit-linear-gradient(#4c0a0a 10%, #1f0404 90%); background-image: -moz-linear-gradient(#4c0a0a 10%, #1f0404 90%); background-image: -o-linear-gradient(#4c0a0a 10%, #1f0404 90%); background-image: linear-gradient(#4c0a0a 10%, #1f0404 90%); }
+
+/* line 262, ../sass/_mixins.scss */
+*[role="main"] header h2, *[role="main"] hgroup h2, .entry-header, .breadcrumbs, .pagination, .previous-next, .widget-header, .secondary-navigation .navigation .tier-1 > a { color: #939393; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 0.8125em; line-height: 2.15385em; letter-spacing: 0.1em; line-height: 1.5em; text-transform: uppercase; }
+/* line 270, ../sass/_mixins.scss */
+*[role="main"] header h2 a:link, *[role="main"] hgroup h2 a:link, .entry-header a:link, .breadcrumbs a:link, .pagination a:link, .previous-next a:link, .widget-header a:link, .secondary-navigation .navigation .tier-1 > a a:link, *[role="main"] header h2 a:visited, *[role="main"] hgroup h2 a:visited, .entry-header a:visited, .breadcrumbs a:visited, .pagination a:visited, .previous-next a:visited, .widget-header a:visited, .secondary-navigation .navigation .tier-1 > a a:visited { color: inherit; text-decoration: none; }
+/* line 275, ../sass/_mixins.scss */
+*[role="main"] header h2 a:hover, *[role="main"] hgroup h2 a:hover, .entry-header a:hover, .breadcrumbs a:hover, .pagination a:hover, .previous-next a:hover, .widget-header a:hover, .secondary-navigation .navigation .tier-1 > a a:hover, *[role="main"] header h2 a:active, *[role="main"] hgroup h2 a:active, .entry-header a:active, .breadcrumbs a:active, .pagination a:active, .previous-next a:active, .widget-header a:active, .secondary-navigation .navigation .tier-1 > a a:active { color: #630d0d; text-decoration: underline; }
+
+/* line 281, ../sass/_mixins.scss */
+*[role="main"] header h2, *[role="main"] hgroup h2, .entry-header, .breadcrumbs, .pagination, .previous-next, .widget-header { border-top: 1px solid #d6d6d6; border-bottom: 1px solid #d6d6d6; margin: 1.5em 0; padding: 0.5em 0.2em; }
+
+/* ----- End Local Mixins ----- */
+/* Main CSS styles for linear content. Design for Mobile first! */
+/* Global Typographic and Element Styles */
+/* line 14, ../sass/style.scss */
+html { min-height: 100%; margin-bottom: 1px; background-color: #eee; }
+
+/* line 20, ../sass/style.scss */
+body { color: #444444; background-color: transparent; }
+
+/* line 25, ../sass/style.scss */
+body, input, textarea, select, button { font: normal 100%/1.75 "Source Sans Pro", Arial, Helvetica, sans-serif; font-weight: 300; }
+/* line 29, ../sass/style.scss */
+body .lt-ie9, input .lt-ie9, textarea .lt-ie9, select .lt-ie9, button .lt-ie9 { font: normal 100%/1.75 "Source Sans Pro", Arial, Helvetica, sans-serif; }
+
+/* line 34, ../sass/style.scss */
+a, a:active, a:visited { color: #7d3e1d; text-decoration: underline; }
+
+/* line 39, ../sass/style.scss */
+a:hover, a:visited:hover { color: #3f1f0f; text-decoration: none; }
+
+/* line 44, ../sass/style.scss */
+a:before:hover, a:before:focus { text-decoration: none; }
+
+/* line 48, ../sass/style.scss */
+img { display: block; margin: 0 auto; }
+
+/* line 53, ../sass/style.scss */
+img, embed, object, video { max-width: 100%; }
+
+/* line 57, ../sass/style.scss */
+header, section, article, aside, footer, figure, div, ul, ol, li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* Set the highlight colors. These selection declarations have to be separate */
+/* line 62, ../sass/style.scss */
+::-moz-selection { background: #7d3e1d; color: black; text-shadow: none; }
+
+/* line 63, ../sass/style.scss */
+::selection { background: #7d3e1d; color: black; text-shadow: none; }
+
+/* line 64, ../sass/style.scss */
+a:link { -webkit-tap-highlight-color: #3f1f0f; }
+
+/* line 66, ../sass/style.scss */
+.giga { font-size: 3em; line-height: 1.16667em; }
+
+/* line 67, ../sass/style.scss */
+.mega { font-size: 2.625em; line-height: 1.33333em; }
+
+/* line 68, ../sass/style.scss */
+.kilo { font-size: 2.25em; line-height: 1.16667em; }
+
+/* line 70, ../sass/style.scss */
+h1, .alpha { color: #7d3e1d; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.75em; line-height: 1.5em; font-weight: 400; line-height: 1.3em; margin-top: 0.4375em; margin-bottom: 0.4375em; }
+
+/* line 71, ../sass/style.scss */
+h2, .bravo { color: #333333; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.5em; line-height: 1.16667em; font-weight: 400; margin-top: 0.875em; margin-bottom: 0.175em; text-transform: uppercase; }
+/* line 95, ../sass/_mixins.scss */
+.text h2, .entry h2, .text .bravo, .entry .bravo { color: #595959; }
+
+/* line 72, ../sass/style.scss */
+h3, .charlie { color: #595959; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.125em; line-height: 1.55556em; font-weight: 400; margin-top: 1.75em; margin-bottom: 0.4375em; }
+
+/* line 73, ../sass/style.scss */
+h4, .delta { color: #666666; font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.0625em; line-height: 1.64706em; font-weight: 400; margin-top: 0.875em; margin-bottom: 0.4375em; }
+
+/* line 74, ../sass/style.scss */
+h5, .echo { color: #444444; font-weight: bold; text-transform: uppercase; margin-top: 0.875em; margin-bottom: 0.4375em; }
+
+/* line 75, ../sass/style.scss */
+h6, .foxtrot { color: #444444; font-weight: bold; margin-top: 0.875em; margin-bottom: 0.4375em; }
+
+/* line 83, ../sass/style.scss */
+h2 a, h2 a:link, h2 a:visited, h2 a:hover, h2 a:active, h2 a:focus, .bravo a, .bravo a:link, .bravo a:visited, .bravo a:hover, .bravo a:active, .bravo a:focus { text-decoration: none; }
+
+/* line 90, ../sass/style.scss */
+h3:first-child { margin-top: 0; }
+
+/* line 101, ../sass/style.scss */
+blockquote { border-left: 3px solid #e2c27a; font-style: italic; }
+/* line 106, ../sass/style.scss */
+blockquote em { font-style: normal; }
+
+/* line 111, ../sass/style.scss */
+.call-to-action { -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
+
+/* line 116, ../sass/style.scss */
+ul, ol { margin-left: 1.5em; }
+
+/* line 120, ../sass/style.scss */
+dl { border-left: 1px solid #d6d6d6; border-right: 1px solid #d6d6d6; border-bottom: 1px solid #d6d6d6; }
+/* line 125, ../sass/style.scss */
+dl dt, dl dd { padding: 0.25em 0.75em 0.125em; }
+/* line 128, ../sass/style.scss */
+dl dt { font-weight: bold; border-top: 1px solid #d6d6d6; border-bottom: 1px solid #d6d6d6; }
+/* line 133, ../sass/style.scss */
+dl dt + dt { border-top: 0; }
+/* line 136, ../sass/style.scss */
+dl dd { margin-left: 1.5em; }
+
+/* line 141, ../sass/style.scss */
+hr { border-top: 1px solid #d6d6d6; }
+
+/* Form Elements */
+/* line 146, ../sass/style.scss */
+form { *zoom: 1; }
+/* line 38, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+form:after { content: ""; display: table; clear: both; }
+
+/* line 150, ../sass/style.scss */
+label { display: inline-block; color: #939393; margin-top: 0.4375em; }
+
+/* line 156, ../sass/style.scss */
+input, textarea { width: 92%; }
+
+/* line 160, ../sass/style.scss */
+input, textarea, button, .button, a.button, .label { padding: 0.25em 0.75em 0.25em; }
+
+/* line 164, ../sass/style.scss */
+input { color: #444444; /*modernizr*/ /*modernizr*/ }
+/* line 167, ../sass/style.scss */
+.no-touch input:focus { -webkit-box-shadow: 0px 0px 0.75em rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 0.75em rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 0.75em rgba(0, 0, 0, 0.2); }
+/* line 170, ../sass/style.scss */
+.no-touch input[required=required]:focus { -webkit-box-shadow: 0px 0px 0.75em rgba(255, 0, 0, 0.5); -moz-box-shadow: 0px 0px 0.75em rgba(255, 0, 0, 0.5); box-shadow: 0px 0px 0.75em rgba(255, 0, 0, 0.5); }
+
+/* line 175, ../sass/style.scss */
+input[type=checkbox], input[type=radio] { width: auto; border: none; margin-right: .75em; }
+
+/* line 181, ../sass/style.scss */
+::-webkit-input-placeholder { color: #939393; font-style: italic; }
+
+/* line 182, ../sass/style.scss */
+::-moz-placeholder { color: #939393; font-style: italic; }
+
+/* line 183, ../sass/style.scss */
+:-ms-input-placeholder { color: #939393; font-style: italic; }
+
+/* line 185, ../sass/style.scss */
+.label { border: 1px solid rgba(255, 255, 255, 0.25); }
+
+/* line 193, ../sass/style.scss */
+.entry input[type=submit], .entry input[type=reset], .entry button, .entry .button, .entry a.button { text-decoration: none; }
+/* line 197, ../sass/style.scss */
+*[role="secondary"] input[type=submit], *[role="complementary"] input[type=submit], *[role="secondary"] input[type=reset], *[role="complementary"] input[type=reset], *[role="secondary"] button, *[role="complementary"] button, *[role="secondary"] .button, *[role="complementary"] .button, *[role="secondary"] a.button, *[role="complementary"] a.button { font-size: 0.875em; line-height: 2em; font-weight: 700; line-height: inherit; }
+
+/* line 204, ../sass/style.scss */
+input[type=reset] { color: #666666; border-color: #d6d6d6; background-color: white; filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); background-image: none; }
+/* line 209, ../sass/style.scss */
+input[type=reset]:hover, input[type=reset]:focus, input[type=reset]:active, input[type=reset].active { color: white; }
+
+/* line 216, ../sass/style.scss */
+figure figcaption { font-weight: 700; line-height: 1.5; text-align: center; }
+
+/* line 223, ../sass/style.scss */
+pre { clear: both; overflow: auto; color: #630d0d; background: #f4e8ce; -webkit-box-shadow: inset 0 0 2em rgba(202, 153, 44, 0.5); -moz-box-shadow: inset 0 0 2em rgba(202, 153, 44, 0.5); box-shadow: inset 0 0 2em rgba(202, 153, 44, 0.5); }
+
+/* A useful class that helps control how lines might break. Use carefully. */
+/* line 232, ../sass/style.scss */
+.pre { white-space: nowrap; }
+
+/* ===== Major Structural Elements ===== */
+/* line 240, ../sass/style.scss */
+.container { margin: 0 auto; max-width: 61.25em; padding-left: 1em; padding-right: 1em; position: relative; }
+
+/* line 248, ../sass/style.scss */
+.row { margin-left: -1em; margin-right: -1em; margin-bottom: 0; *zoom: 1; }
+/* line 38, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.row:after { content: ""; display: table; clear: both; }
+
+/* line 255, ../sass/style.scss */
+.column { padding-top: 1em; padding-left: 1em; padding-right: 1em; padding-bottom: 1em; }
+
+/* When an element inside a row needs column-style padding but does not need to float */
+/* line 263, ../sass/style.scss */
+.not-column, .section-header { padding-left: 1em; padding-right: 1em; }
+
+/* line 270, ../sass/style.scss */
+#site_header { background: #333; -webkit-box-shadow: inset 0 0 2em rgba(0, 0, 0, 0.3); -moz-box-shadow: inset 0 0 2em rgba(0, 0, 0, 0.3); box-shadow: inset 0 0 2em rgba(0, 0, 0, 0.3); padding: 1em 0 0.75em; position: relative; }
+/* line 276, ../sass/style.scss */
+#site_header h1 { color: #aaa; margin: 0; text-shadow: 0 0 3px black; }
+/* line 281, ../sass/style.scss */
+#site_header h1 strong { color: #fff; font-weight: 400; }
+
+/* line 288, ../sass/style.scss */
+#status { background: #000; padding: 1em 0; position: relative; }
+/* line 293, ../sass/style.scss */
+#status h2 { border-left: 4px solid #7d3e1d; color: #ca992c; font-size: 1em; line-height: 1.75em; line-height: 1.25em; margin: 0; padding-left: .5em; }
+
+/* line 303, ../sass/style.scss */
+#nav1 { background: #ccc; line-height: 1em; }
+/* line 307, ../sass/style.scss */
+#nav1 ul { margin-left: 0; }
+/* line 311, ../sass/style.scss */
+#nav1 li { font-family: "Francois One", "Myriad Pro", "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 1.375em; line-height: 1.27273em; line-height: 44px; text-transform: uppercase; }
+/* line 318, ../sass/style.scss */
+#nav1 li.jump { display: block; }
+/* line 321, ../sass/style.scss */
+#nav1 li .arrow { color: #901313; font-size: .75em; }
+/* line 327, ../sass/style.scss */
+#nav1 a, #nav1 a:link, #nav1 a:visited { border-bottom: 2px solid #aaaaaa; color: #999; display: block; line-height: 44px; padding: 0; text-decoration: none; }
+/* line 337, ../sass/style.scss */
+#nav1 a:hover, #nav1 a:active, #nav1 a:focus { border-bottom: 2px solid #666666; color: #7d3e1d; }
+
+/* ===== Default Container and Interior Page Elements ===== */
+/* line 353, ../sass/style.scss */
+.default-container { padding: 2em 0; }
+
+/* line 357, ../sass/style.scss */
+.content-wrapper { background: #ebd5a4; border-top: 1px solid #666666; border-bottom: 1px solid #333333; -webkit-box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.3); box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.3); }
+
+/* line 364, ../sass/style.scss */
+.intro { margin: 0 auto; max-width: 700px; padding: 1em 2em; }
+/* line 369, ../sass/style.scss */
+.intro h1 { text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
+
+/* line 374, ../sass/style.scss */
+.category-module { background: white; border: 1px solid #d6d6d6; padding: .5em; }
+/* line 384, ../sass/style.scss */
+.category-module .text { padding: .5em; }
+/* line 387, ../sass/style.scss */
+.category-module .text h2, .category-module .text p { margin-top: .25em; }
+/* line 391, ../sass/style.scss */
+.category-module .text h3 { margin-top: 0; }
+
+/* ===== Main Content Column ===== */
+/* line 403, ../sass/style.scss */
+*[role="main"] { background: #fff; background: rgba(255, 255, 255, 0.9); padding-top: 0.875em; padding-bottom: 0.875em; }
+/* line 409, ../sass/style.scss */
+*[role="main"] .page-title { margin: 0.5em 0 0; padding: 0.25em 0; }
+/* line 414, ../sass/style.scss */
+*[role="main"] > header, *[role="main"] > hgroup { margin-bottom: .5em; }
+/* line 418, ../sass/style.scss */
+*[role="main"] header, *[role="main"] hgroup { padding-bottom: 0.875em; }
+/* line 421, ../sass/style.scss */
+*[role="main"] header h2, *[role="main"] hgroup h2 { margin: 0; }
+
+/* line 430, ../sass/style.scss */
+.full-column-hero img { border: 1px solid white; -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.2); box-shadow: 0 0 1em rgba(0, 0, 0, 0.2); margin: 0.5em 0; }
+
+/* line 437, ../sass/style.scss */
+.entry { margin-bottom: 2.1875em; }
+/* line 440, ../sass/style.scss */
+.entry.writing-intro { margin-bottom: 0.4375em; }
+/* line 444, ../sass/style.scss */
+.entry h3 { margin-top: .5em; }
+/* line 447, ../sass/style.scss */
+.entry h3 a { text-decoration: none; }
+/* line 451, ../sass/style.scss */
+.entry h3 a:hover, .entry h3 a:active { color: #630d0d; text-decoration: underline; }
+
+/* line 461, ../sass/style.scss */
+.entry-header .viewmore { float: right; }
+/* line 464, ../sass/style.scss */
+.entry-header .viewmore:after { content: " »"; }
+/* line 468, ../sass/style.scss */
+.entry-header .viewmore a { color: #bbb; }
+/* line 472, ../sass/style.scss */
+.entry-header .viewmore a:hover, .entry-header .viewmore a:focus { text-decoration: none; }
+/* line 477, ../sass/style.scss */
+.entry-header a:hover, .entry-header a:active { color: #333333; }
+
+/* line 485, ../sass/style.scss */
+.column-hero { margin-top: -0.875em; margin-left: -1em; margin-right: -1em; }
+
+/* line 491, ../sass/style.scss */
+.breadcrumbs, .pagination { padding: 0.25em 0; }
+/* line 495, ../sass/style.scss */
+.breadcrumbs li, .pagination li { display: inline-block; }
+
+/* line 502, ../sass/style.scss */
+.breadcrumbs li { color: #aaa; }
+/* line 505, ../sass/style.scss */
+.breadcrumbs li a, .breadcrumbs li a:link, .breadcrumbs li a:visited { color: #777; }
+/* line 509, ../sass/style.scss */
+.breadcrumbs li:after { content: "»"; }
+/* line 513, ../sass/style.scss */
+.breadcrumbs li:last-child { margin-left: .25em; }
+/* line 516, ../sass/style.scss */
+.breadcrumbs li:last-child:after { content: none; }
+/* line 522, ../sass/style.scss */
+.breadcrumbs a { display: inline-block; padding: .25em; }
+
+/* line 528, ../sass/style.scss */
+.pagination { text-align: center; }
+/* line 531, ../sass/style.scss */
+.pagination li { margin-right: .25em; }
+/* line 535, ../sass/style.scss */
+.pagination a { display: block; padding: 0.375em 0.75em 0.25em; border: 1px solid #f0dfb9; }
+/* line 540, ../sass/style.scss */
+.pagination a:hover, .pagination a:focus { background-color: white; color: #ca992c; text-decoration: none; }
+/* line 547, ../sass/style.scss */
+.pagination .active { background: #d9ae50; }
+/* line 550, ../sass/style.scss */
+.pagination .active a { border: 1px solid #ca992c; color: #fff; cursor: default; }
+/* line 555, ../sass/style.scss */
+.pagination .active a:hover, .pagination .active a:focus { background: #d9ae50; }
+/* line 563, ../sass/style.scss */
+.pagination .previous span, .pagination .next span { font-size: 1.25em; line-height: 1; }
+/* line 569, ../sass/style.scss */
+.pagination a.disabled { background: none; border: 1px solid #eeeeee; color: #ddd; cursor: default; }
+/* line 575, ../sass/style.scss */
+.pagination a.disabled:hover, .pagination a.disabled:focus { background: none; }
+/* line 580, ../sass/style.scss */
+.pagination .disabled, .pagination .disabled:hover, .pagination .disabled:focus { cursor: default; background-color: #d6d6d6; }
+/* line 585, ../sass/style.scss */
+.pagination .active, .pagination .active:hover, .pagination .active:focus { cursor: default; color: #444444; }
+
+/* Previous / Next pattern for single posts / pages */
+/* line 593, ../sass/style.scss */
+.previous-next { text-align: center; margin: 1.75em 0; *zoom: 1; }
+/* line 38, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.previous-next:after { content: ""; display: table; clear: both; }
+/* line 599, ../sass/style.scss */
+.previous-next .prev-wrapper, .previous-next .next-wrapper { display: inline; padding: 0 0.5em; }
+/* line 603, ../sass/style.scss */
+.previous-next .main-text, .previous-next .secondary { padding: .25em; }
+
+/* ===== Elements within the .text or .entry blocks  ===== */
+/* line 614, ../sass/style.scss */
+.text, .entry { /* Remove when lists are nested */ /* Pretty forms */ /* images from TinyMCE */ /* Prettier tables if authors use the correct elements */ /* For the sample style guide (spec sheet) */ }
+/* line 616, ../sass/style.scss */
+.text p, .text ul, .text ol, .text dl, .text dd, .text blockquote, .text address, .text pre, .text form, .text table, .text figure, .entry p, .entry ul, .entry ol, .entry dl, .entry dd, .entry blockquote, .entry address, .entry pre, .entry form, .entry table, .entry figure { line-height: 1.4em; margin-top: 0.4375em; margin-bottom: 1.3125em; }
+/* line 621, ../sass/style.scss */
+.text p:last-child, .text ul:last-child, .text ol:last-child, .text dl:last-child, .text dd:last-child, .text blockquote:last-child, .text address:last-child, .text pre:last-child, .text form:last-child, .text table:last-child, .text figure:last-child, .entry p:last-child, .entry ul:last-child, .entry ol:last-child, .entry dl:last-child, .entry dd:last-child, .entry blockquote:last-child, .entry address:last-child, .entry pre:last-child, .entry form:last-child, .entry table:last-child, .entry figure:last-child { margin-bottom: 0; }
+/* line 626, ../sass/style.scss */
+.text li, .entry li { font-size: .95em; margin-bottom: 0.4375em; }
+/* line 630, ../sass/style.scss */
+.text li li, .entry li li { font-size: .9em; }
+/* line 636, ../sass/style.scss */
+.text li ul, .text li ol, .entry li ul, .entry li ol { margin-bottom: 0; }
+/* line 643, ../sass/style.scss */
+.text a:hover, .text a:focus, .entry a:hover, .entry a:focus { text-decoration: none; }
+/* line 646, ../sass/style.scss */
+.text a[href^="tel:"], .entry a[href^="tel:"] { text-decoration: none; border-bottom: 1px dotted #939393; }
+/* line 652, ../sass/style.scss */
+.text figcaption, .entry figcaption { color: #939393; font-size: 0.8125em; line-height: 2.15385em; font-style: italic; font-weight: 400; padding: 0 0.5em; }
+/* line 659, ../sass/style.scss */
+.text figcaption strong, .entry figcaption strong { color: #666666; font-weight: 900; }
+/* line 665, ../sass/style.scss */
+.text var, .entry var { color: #333333; }
+/* line 667, ../sass/style.scss */
+.text cite, .text abbr[title], .text .abbreviation[title], .text dfn[title], .entry cite, .entry abbr[title], .entry .abbreviation[title], .entry dfn[title] { border-bottom: 1px dotted #630d0d; }
+/* line 671, ../sass/style.scss */
+.text cite a, .entry cite a { text-decoration: none; }
+/* line 673, ../sass/style.scss */
+.text abbr, .text .abbreviation, .entry abbr, .entry .abbreviation { font-size: .875em; text-transform: uppercase; letter-spacing: 0.125em; }
+/* line 679, ../sass/style.scss */
+.text p code, .text samp, .text kbd, .entry p code, .entry samp, .entry kbd { display: inline-block; padding: 0.2em 0.5em 0.1em; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+/* line 686, ../sass/style.scss */
+.text p code, .text samp, .entry p code, .entry samp { border: 0; }
+/* line 688, ../sass/style.scss */
+.text code, .entry code { color: #630d0d; font-size: .95em; line-height: 1.3em; tab-size: 3; }
+/* line 695, ../sass/style.scss */
+.text s, .text strike, .text del, .entry s, .entry strike, .entry del { color: #939393; }
+/* line 697, ../sass/style.scss */
+.text .sidebar, .entry .sidebar { margin: 1em 0; border-top: 2px solid #7d3e1d; border-bottom: 2px solid #7d3e1d; padding: 0.75em 1.5em; color: #630d0d; font-size: 1.25em; }
+/* line 705, ../sass/style.scss */
+.text .sidebar > p, .entry .sidebar > p { margin-bottom: 0; }
+/* line 715, ../sass/style.scss */
+.text form .horizontal-list li, .entry form .horizontal-list li { margin-right: 1em; }
+/* line 719, ../sass/style.scss */
+.text form .element-caption, .entry form .element-caption { color: #939393; }
+/* line 724, ../sass/style.scss */
+.text fieldset, .entry fieldset { margin-bottom: .5em; }
+/* line 727, ../sass/style.scss */
+.text fieldset legend, .entry fieldset legend { font-size: 1.125em; padding: 0.5em 0.5em 0.75em 0; }
+/* line 733, ../sass/style.scss */
+.text label.active, .entry label.active { /* Selected radio/checkboxes will add this class to the parent label */ color: #444444; }
+/* line 739, ../sass/style.scss */
+.text img[style='float: left;'], .entry img[style='float: left;'] { max-width: 33%; margin-right: 1em; margin-bottom: .5em; }
+/* line 744, ../sass/style.scss */
+.text img[style='float: right;'], .entry img[style='float: right;'] { max-width: 33%; margin-left: 1em; margin-bottom: .5em; }
+/* line 753, ../sass/style.scss */
+.text table caption, .entry table caption { caption-side: top; color: #444444; font-size: 1.125em; text-align: left; margin-bottom: 1.75em; }
+/* line 760, ../sass/style.scss */
+.text table thead, .text table tfoot, .entry table thead, .entry table tfoot { border-bottom: 1px solid #d6d6d6; }
+/* line 763, ../sass/style.scss */
+.text table tr, .entry table tr { background-color: #f6f6f6; }
+/* line 766, ../sass/style.scss */
+.text table tr th, .entry table tr th { background-color: #f0f0f0; }
+/* line 770, ../sass/style.scss */
+.text table tr:nth-child(even), .entry table tr:nth-child(even) { background-color: #f0f0f0; }
+/* line 773, ../sass/style.scss */
+.text table th, .text table td, .entry table th, .entry table td { padding: 0.25em 0.5em 0.2em; border-left: 2px solid white; }
+/* line 777, ../sass/style.scss */
+.text table th:first-child, .text table td:first-child, .entry table th:first-child, .entry table td:first-child { border-left: none; }
+/* line 781, ../sass/style.scss */
+.text table tfoot, .entry table tfoot { border-top: 1px solid #d6d6d6; }
+/* line 786, ../sass/style.scss */
+.text img, .entry img { margin: 0 0 0.25em; }
+/* line 791, ../sass/style.scss */
+.text .example, .entry .example { position: relative; border: 1px solid #dddddd; padding: 1em 1em 0.125em; margin-bottom: 1.25em; -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2); box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2); }
+/* line 798, ../sass/style.scss */
+.text .example:before, .entry .example:before { content: 'EXAMPLE'; position: absolute; top: 0; right: 0; font-size: 0.75em; color: white; background-color: #630d0d; padding: 0.4em 0.75em 0.2em; }
+/* line 808, ../sass/style.scss */
+.text .example + .examplecode, .entry .example + .examplecode { margin-top: -1.25em; }
+
+/* end .text */
+/* ===== Secondary / Complementary Column ===== */
+/* line 824, ../sass/style.scss */
+*[role="secondary"], *[role="complementary"] { background-color: #ebd5a4; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF0DFB9', endColorstr='#FFEBD5A4'); background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(10%, #f0dfb9), color-stop(90%, #ebd5a4)); background-image: -webkit-linear-gradient(#f0dfb9 10%, #ebd5a4 90%); background-image: -moz-linear-gradient(#f0dfb9 10%, #ebd5a4 90%); background-image: -o-linear-gradient(#f0dfb9 10%, #ebd5a4 90%); background-image: linear-gradient(#f0dfb9 10%, #ebd5a4 90%); padding-top: 0.875em; padding-bottom: 0.875em; }
+
+/* line 832, ../sass/style.scss */
+.aside-header a.button, .aside-header a.label, .widget a.button, .widget a.label { display: inline-block; margin: 0.75em 0 0.5em; text-decoration: none; }
+/* line 838, ../sass/style.scss */
+.ie8 .aside-header a.label, .ie8 .widget a.label { display: none; }
+
+/* line 843, ../sass/style.scss */
+.widget { padding: 0 0 1em; text-shadow: 0 0 3px rgba(255, 255, 255, 0.25); }
+/* line 847, ../sass/style.scss */
+.widget p, .widget ul, .widget ol { font-size: 0.8125em; line-height: 2.15385em; color: #8b691e; line-height: 1.75em; margin-top: .75em; margin-bottom: .75em; }
+/* line 855, ../sass/style.scss */
+.widget li { line-height: 1.75em; margin: 0.5em 0; }
+/* line 860, ../sass/style.scss */
+.widget a:link, .widget a:visited { text-decoration: underline; }
+/* line 865, ../sass/style.scss */
+.widget .widget-header a:link, .widget .widget-header a:visited { text-decoration: none; }
+/* line 871, ../sass/style.scss */
+.widget img { margin: 0; }
+/* line 875, ../sass/style.scss */
+.widget p.byline, .widget p.attribution { font-size: 0.75em; line-height: 2.33333em; font-style: italic; line-height: 1.75em; margin-left: 1em; text-indent: -1em; }
+/* line 882, ../sass/style.scss */
+.widget p.byline a, .widget p.byline a:link, .widget p.byline a:visited, .widget p.attribution a, .widget p.attribution a:link, .widget p.attribution a:visited { color: inherit; text-decoration: underline; }
+/* line 888, ../sass/style.scss */
+.widget a.button, .widget a.label { display: inline-block; margin: 1em 0 0.5em; text-decoration: none; }
+
+/* line 895, ../sass/style.scss */
+.widget-header { color: #a07923; border-top: 1px solid #e2c27a; border-bottom: 1px solid #e2c27a; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2); }
+/* line 902, ../sass/style.scss */
+.widget-header a:hover, .widget-header a:active { color: #333333; }
+
+/* line 907, ../sass/style.scss */
+.twitter-icon { display: inline-block; vertical-align: middle; }
+/* line 911, ../sass/style.scss */
+.ie8 .twitter-icon { display: none; }
+
+/* line 916, ../sass/style.scss */
+.tweet, .widget .item { margin-bottom: 1em; }
+/* line 919, ../sass/style.scss */
+.tweet .date, .widget .item .date { color: #ca992c; font-size: 0.75em; line-height: 2.33333em; font-style: italic; margin-top: -.75em; }
+/* line 925, ../sass/style.scss */
+.tweet .date:before, .widget .item .date:before { content: "– "; }
+
+/* ===== Main Footer Elements ===== */
+/* line 935, ../sass/style.scss */
+#site_footer { *zoom: 1; }
+/* line 38, ../../../../../../../../usr/local/Cellar/ruby/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#site_footer:after { content: ""; display: table; clear: both; }
+/* line 938, ../sass/style.scss */
+#site_footer .container { padding-top: 2em; padding-bottom: 2em; text-align: center; }
+
+/* line 949, ../sass/style.scss */
+.secondary-navigation .navigation a { display: block; color: #630d0d; text-align: center; padding: 0.4em 0.35em; text-decoration: none; font-size: 0.875em; line-height: 1.5; }
+/* line 958, ../sass/style.scss */
+.secondary-navigation .navigation a:hover, .secondary-navigation .navigation a:focus { color: white; text-shadow: 0 0 3px rgba(0, 0, 0, 0.4); }
+/* line 964, ../sass/style.scss */
+.secondary-navigation .navigation .tier-1 { padding: 0 2em; margin-bottom: 1em; }
+/* line 968, ../sass/style.scss */
+.secondary-navigation .navigation .tier-1 > a { color: white; border-top: 1px solid #ca992c; border-top-color: rgba(255, 255, 255, 0.2); border-bottom: 1px solid #ca992c; border-bottom-color: rgba(255, 255, 255, 0.2); margin-bottom: .75em; padding: .5em; }
+/* line 978, ../sass/style.scss */
+.secondary-navigation .navigation .tier-1 > a:hover, .secondary-navigation .navigation .tier-1 > a:focus, .secondary-navigation .navigation .tier-1 > a:active { background: rgba(9, 1, 1, 0.4); }
+
+/* line 986, ../sass/style.scss */
+.copyright { clear: both; font-size: 0.875em; padding: 2em 0 0; }
+/* line 991, ../sass/style.scss */
+.copyright p { margin-bottom: 1em; }
+/* line 995, ../sass/style.scss */
+.copyright span { white-space: nowrap; }
+/* line 999, ../sass/style.scss */
+.copyright a { color: #630d0d; }
+/* line 1002, ../sass/style.scss */
+.copyright a:hover, .copyright a:focus { color: white; }
+
+/* ===== General Styles ===== */
+/* line 1014, ../sass/style.scss */
+.readmore { font-size: .95em; font-style: italic; line-height: inherit; }
+/* line 1019, ../sass/style.scss */
+.readmore:after { content: " »"; }
+
+/* line 1024, ../sass/style.scss */
+.byline, .attribution { color: #999; font-size: 0.8125em; line-height: 2.15385em; font-style: italic; margin: -0.5em 0 1.5em; }
+/* line 1030, ../sass/style.scss */
+.widget .byline:before, blockquote .byline:before, .byline:before, .widget .attribution:before, blockquote .attribution:before, .attribution:before { content: "— "; }
+/* line 1034, ../sass/style.scss */
+.byline a:link, .byline a:visited, .attribution a:link, .attribution a:visited { color: #999; text-decoration: none; }
+/* line 1038, ../sass/style.scss */
+.byline a:link.author, .byline a:visited.author, .attribution a:link.author, .attribution a:visited.author { color: #630d0d; text-decoration: underline; }
+/* line 1044, ../sass/style.scss */
+.byline .author, .attribution .author { color: #444; }
+/* line 1050, ../sass/style.scss */
+.byline a:hover, .byline a:focus, .entry .byline a:hover, .entry .byline a:focus, .attribution a:hover, .attribution a:focus, .entry .attribution a:hover, .entry .attribution a:focus { text-decoration: underline; }
+
+/* line 1056, ../sass/style.scss */
+.plans { width: 100%; }
+/* line 1059, ../sass/style.scss */
+.plans th, .plans td { font-size: 0.75em; line-height: 2.33333em; padding-right: .5em; }
+
+/* ! ==== Styles allowed in TinyMCE drop down menu ==== */
+/* line 1081, ../sass/style.scss */
+.micro { font-size: .875em; }
+
+/* line 1083, ../sass/style.scss */
+.serif, .serif-smallcaps { font-family: Georgia, serif; font-size: 1.125em; }
+
+/* line 1087, ../sass/style.scss */
+.smallcaps, .serif-smallcaps, .abbreviation { text-transform: lowercase; font-variant: small-caps; font-size: 1.25em; letter-spacing: 0.125em; }
+
+/* line 1097, ../sass/style.scss */
+.allcaps { text-transform: uppercase; letter-spacing: 0.125em; }
+
+/* line 1101, ../sass/style.scss */
+.darktext { color: #242424; }
+
+/* line 1104, ../sass/style.scss */
+.redtext { color: #c33; }
+
+/* line 1107, ../sass/style.scss */
+.yellow-highlight { background-color: #ff8; display: inline-block; padding: 0.125em 0.25em; margin: 0 -0.125em; }
+
+/* line 1113, ../sass/style.scss */
+.abbreviation { border-bottom: 1px dotted #939393; }
+
+/* ! ==== No JS warning message... more of a suggestion, really ==== */
+/* line 244, ../sass/_functions.scss */
+#nojs, #oldie-warning { padding: 0.75em 0.75em 0.65em; text-align: center; background-color: #c33; }
+/* line 249, ../sass/_functions.scss */
+#nojs p, #oldie-warning p { color: #e9e9e9; font-weight: bold; font-size: 0.875em; margin: 0; }
+/* line 255, ../sass/_functions.scss */
+#nojs a, #oldie-warning a { color: #e9e9e9; text-decoration: underline; }
+/* line 259, ../sass/_functions.scss */
+#nojs a:hover, #nojs a:focus, #oldie-warning a:hover, #oldie-warning a:focus { color: #fff; text-decoration: none; }
+
+/* line 265, ../sass/_functions.scss */
+#oldie-warning { background-color: #ff7; }
+/* line 268, ../sass/_functions.scss */
+#oldie-warning p { color: #444; }
+/* line 271, ../sass/_functions.scss */
+#oldie-warning a { color: #444; }
+/* line 274, ../sass/_functions.scss */
+#oldie-warning a:hover, #oldie-warning a:focus { color: #000; }
+
+/* line 279, ../sass/_functions.scss */
+.js #nojs { display: none; }
+
+/* ! Temporary styles */
+/* line 1124, ../sass/style.scss */
+.index .entry em { color: #999; font-size: 0.75em; }
+
+/* line 1129, ../sass/style.scss */
+#test-window-size { color: #939393; font-family: Verdana, sans-serif; font-size: 0.75em; line-height: 1em; position: fixed; top: 2px; right: 2px; z-index: 1000; }
+
+/* For image replacement */
+/* line 404, ../sass/_functions.scss */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/* Hide for both screenreaders and browsers. */
+/* line 407, ../sass/_functions.scss */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal. */
+/* line 410, ../sass/_functions.scss */
+.screen-reader-text { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .screen-reader-text class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+/* line 413, ../sass/_functions.scss */
+.screen-reader-text.focusable:active, .screen-reader-text.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+/* line 416, ../sass/_functions.scss */
+.invisible { visibility: hidden; }
+
+@media print { /* line 424, ../sass/_functions.scss */
+  * { background: transparent !important; color: black !important; /* Black prints faster: h5bp.com/s */ box-shadow: none !important; text-shadow: none !important; }
+  /* line 430, ../sass/_functions.scss */
+  body { font-size: 10pt; line-height: 1.67; }
+  /* line 434, ../sass/_functions.scss */
+  a, a:visited { text-decoration: underline !important; }
+  /* line 437, ../sass/_functions.scss */
+  *[role="main"] a[href]:after { content: " (" attr(href) ")"; font-size: 75%; }
+  /* line 441, ../sass/_functions.scss */
+  *[role="main"] abbr[title]:after { content: " (" attr(title) ")"; font-size: 75%; }
+  /* line 445, ../sass/_functions.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  /* line 448, ../sass/_functions.scss */
+  pre, blockquote { border: 1px solid #999999; page-break-inside: avoid; }
+  /* line 452, ../sass/_functions.scss */
+  thead { display: table-header-group; /* h5bp.com/t */ }
+  /* line 455, ../sass/_functions.scss */
+  tr, img { page-break-inside: avoid; }
+  /* line 458, ../sass/_functions.scss */
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  /* line 464, ../sass/_functions.scss */
+  p, h2, h3 { orphans: 3; widows: 3; }
+  /* line 468, ../sass/_functions.scss */
+  h2, h3 { page-break-after: avoid; }
+  /* Hide parts of the layout that overcomplicate paged output */
+  /* line 473, ../sass/_functions.scss */
+  .do-not-print, .screen-reader-text, .invisible, .jump-to-menu, .jump-link, #site-map-link { display: none; }
+  /* line 476, ../sass/_functions.scss */
+  .say-no-more { display: inline; visibility: visible; }
+  /* line 482, ../sass/_functions.scss */
+  .blog-widget li, .event-widget li { padding-left: 6em; } }
+/*  When we want to review the markup for W3 and similar errors, turn some of these on  Uses :not selectors a bunch, so only modern browsers will support them */
+/**
+*  This file was taken from  http://www.tomato-root.com/sandbox/holmes/
+*  and adapted to remove some annoying warnings that I really don't care about.
+*  Also removed .holmes-debug namespace, so I can just include stylesheet as following.
+*
+*    <%= stylesheet_link_tag "debug" if Rails.env.development? %>
+*
+*  ------------------------
+*
+*  Debug colours and what they mean
+*
+*  - tomato       denotes an error, invalid markup or a missing attribute
+*  - gold         denotes a warning, so potentionally erroneous markup or bad practice
+*  - goldenrod    denotes a deprecated element or element with deprecated or Non-W3C attributes
+*  - darkorchid   denotes missing translation. Authors should add the class in while working, and remove it when done. 
+*
+*  -------------------------
+*/
+/************** General... applied manually
+**************/
+/* line 24, ../sass/_debug.scss */
+.error, .invalid { color: tomato; }
+
+/************** LINKS
+**************/
+/************** IMAGES
+**************/
+/************************* MISC ATTRIBUTES
+**************************/
+/************************************************************************* DEPRECATED & NON-W3C CONTENT ELEMENTS (goldenrod) Based largely on http://www.w3.org/TR/html5/obsolete.html#obsolete
+*************************************************************************/
+/********************* EMPTY ELEMENTS (warning level for now)
+**********************/
+/* line 119, ../sass/_debug.scss */
+applet, acronym, center, dir, font, strike, u, big, tt, marquee, plaintext, xmp { outline: 2px solid goldenrod; }
+
+/************************************************************************ DEPRECATED NON-W3C ATTRIBUTES (goldenrod) Based largely on http://www.w3.org/TR/html5/obsolete.html#obsolete
+************************************************************************/
+/* line 132, ../sass/_debug.scss */
+body[bgproperties], body[topmargin], body[rightmargin], body[bottommargin], body[leftmargin] { outline: 2px solid goldenrod; }
+
+/* line 139, ../sass/_debug.scss */
+*[bordercolor], *[bordercolordark], *[bordercolorlight], table[frame] { outline: 2px solid goldenrod; }
+
+/* Keep this at the bottom since it will create a huge set of data */
+/*  Would have liked to use Compass' built-in font-face mixin with the inline-font-files() helper, but it seems to be BROKEN in older versions! Be sure to upgrade to at least 0.12.1 to have this work properly.  in Terminal, gem install compass --version '= 0.12.1'
+
+It goes like this: 
+
+Paths for the CSS need to be relative ot the stylesheet. Path to the inline file uses config.rb, so, it might be different. 
+
+@font-face { font-family: "SommetSlabBold";                                                // Normal declaration src: url('/fonts/SommetSlabBold-webfont.eot');                                // Older versions of IE need the EOT src: src: local('☺'),                                                        // Stop old IE from reaqding further url('/fonts/SommetSlabBold-webfont.eot?#iefix') format('eot'),           // IE9 needs an EOT fix url('/fonts/SommetSlabBold-webfont.svg?#SommetSlabBold') format('svg'),  // SVG needs to be separate for iOS. Better rendering for browsers that suport it, too.  inline-font-files( "SommetSlabBold-webfont.ttf", truetype );             // Other browsers get a Base64 encoded font inline, no HTTP request font-weight: normal;  // helpful to declare these values so the fallback fonts still retain some style font-style: normal;  // helpful to declare these values so the fallback fonts still retain some style
+}
+
+Since we are importing the data of the entire font, try to make sure only the neccesary fonts are listed here!
+ */
+/*
+@font-face { font-family: "SommetSlabLight"; src: url("../fonts/SommetSlabLight-webfont.eot"); src: local('☺'), url("../fonts/SommetSlabLight-webfont.eot?#iefix") format('embedded-opentype'),  url('../fonts/SommetSlabLight-webfont.ttf') format('truetype'), url('../fonts/SommetSlabLight-webfont.svg?#SommetSlabLight') format('svg');  font-weight: normal; font-style: normal;
+}
+*/
